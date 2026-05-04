@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-# SIMPLE AIMBOT PANEL - NO LOGIN (Port 2000)
+
 
 import os
 import sys
@@ -12,7 +11,6 @@ from pymem import Pymem
 from pymem.pattern import pattern_scan_all
 from pymem.memory import read_bytes, write_bytes, read_int, write_int
 
-# Try to hide console (optional, may fail on some systems)
 if sys.platform == "win32":
     try:
         ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 0)
@@ -29,7 +27,7 @@ is_initialized = False
 aimbot_active = False
 original_values = {}
 
-# ==================== PATTERN & OFFSETS ====================
+# ==================== YOUR PATTERN & OFFSETS ====================
 NEW_AIMBOT_AOB = "FF FF FF FF ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FF FF FF FF FF FF FF FF FF FF FF FF ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? A5 43"
 
 OFFSET_AIMBOT_AI_READ = 0xFC
@@ -48,17 +46,54 @@ def mkp(aob):
         m = aob.replace(" ", "\\x")
         return bytes(f"\\x{m}".encode())
 
+# ==================== FAIRX PROCESS DETECTION (WORKING) ====================
+def is_game_running():
+    """FairX style process detection - more reliable"""
+    try:
+        for proc in psutil.process_iter(['name']):
+            if proc.info['name']:
+                name_lower = proc.info['name'].lower()
+                # Check multiple possible names
+                if 'hd-player' in name_lower or 'hdplayer' in name_lower:
+                    return True
+                if current_process_name.lower() in name_lower:
+                    return True
+    except:
+        pass
+    return False
+
+def get_game_process_name():
+    """Returns the actual running game process name"""
+    try:
+        for proc in psutil.process_iter(['name']):
+            if proc.info['name']:
+                name_lower = proc.info['name'].lower()
+                if 'hd-player' in name_lower or 'hdplayer' in name_lower:
+                    return proc.info['name']
+    except:
+        pass
+    return current_process_name
+
 # ==================== SCAN FUNCTION ====================
 def scan_entities():
-    global aimbot_addresses, is_initialized, original_values
+    global aimbot_addresses, is_initialized, original_values, current_process_name
     
     aimbot_addresses = []
     original_values = {}
     
+    # FAIRX STYLE: Check if game is running FIRST
+    if not is_game_running():
+        return "Game not found - Make sure HD-Player is running"
+    
+    # Get actual process name
+    actual_name = get_game_process_name()
+    if actual_name != current_process_name:
+        current_process_name = actual_name
+    
     try:
         proc = Pymem(current_process_name)
     except Exception as e:
-        return f"Process '{current_process_name}' not found. Make sure game is running."
+        return f"Cannot open process: {str(e)}"
     
     try:
         entity_pattern = mkp(NEW_AIMBOT_AOB)
@@ -67,7 +102,7 @@ def scan_entities():
         
         if not found_addresses:
             proc.close_process()
-            return "No entities found. Pattern may need update."
+            return "No entities found"
         
         valid_entities = []
         for base_addr in found_addresses:
@@ -95,6 +130,9 @@ def enable_aimbot():
     if aimbot_active:
         return "Aimbot already enabled"
     
+    if not is_game_running():
+        return "Game not running"
+    
     try:
         proc = Pymem(current_process_name)
         for entity in aimbot_addresses:
@@ -117,6 +155,10 @@ def disable_aimbot():
     if not aimbot_active:
         return "Aimbot already disabled"
     
+    if not is_game_running():
+        aimbot_active = False
+        return "Aimbot disabled (game closed)"
+    
     try:
         proc = Pymem(current_process_name)
         for key, orig in original_values.items():
@@ -131,7 +173,8 @@ def disable_aimbot():
         aimbot_active = False
         return "Aimbot AI DISABLED"
     except Exception as e:
-        return f"Disable failed: {str(e)}"
+        aimbot_active = False
+        return "Aimbot disabled"
 
 # ==================== HTML ====================
 INDEX_HTML = """
@@ -216,16 +259,6 @@ INDEX_HTML = """
             color: #ff8a8a;
         }
 
-        .btn-scan:hover {
-            background: #2a1a1a;
-        }
-        .btn-on:hover {
-            background: #1a2a1a;
-        }
-        .btn-off:hover {
-            background: #2a1a1a;
-        }
-
         .console {
             background: #0a0a0a;
             border: 1px solid #2a2a2a;
@@ -253,7 +286,7 @@ INDEX_HTML = """
 <body>
     <div class="container">
         <h1>AIMBOT PANEL</h1>
-        <div class="sub">NO LOGIN • PORT 2000</div>
+        <div class="sub">PORT 2000</div>
 
         <div class="status" id="status">STATUS: READY</div>
 
@@ -261,7 +294,7 @@ INDEX_HTML = """
         <button class="btn btn-on" onclick="sendCommand('on')">AIMBOT ON</button>
         <button class="btn btn-off" onclick="sendCommand('off')">AIMBOT OFF</button>
 
-        <div class="console" id="console">[SYSTEM] READY\\n[SYSTEM] AIMBOT PANEL ACTIVE</div>
+        <div class="console" id="console">[SYSTEM] READY</div>
     </div>
 
     <script>
@@ -271,7 +304,10 @@ INDEX_HTML = """
         function log(message) {
             const now = new Date();
             const time = now.toLocaleTimeString();
-            consoleEl.textContent += `\\n[${time}] ${message}`;
+            if (consoleEl.textContent.length > 0 && !consoleEl.textContent.endsWith('\\n')) {
+                consoleEl.textContent += '\\n';
+            }
+            consoleEl.textContent += `[${time}] ${message}`;
             consoleEl.scrollTop = consoleEl.scrollHeight;
             if (consoleEl.textContent.length > 3000) {
                 consoleEl.textContent = consoleEl.textContent.slice(-2500);
@@ -285,7 +321,7 @@ INDEX_HTML = """
         async function sendCommand(cmd) {
             let action = '';
             if (cmd === 'scan') {
-                log('SCANNING FOR ENTITIES...');
+                log('SCANNING...');
                 setStatus('SCANNING...');
                 action = 'scan';
             } else if (cmd === 'on') {
