@@ -1,1 +1,360 @@
+#!/usr/bin/env python
+# SIMPLE AIMBOT PANEL - NO LOGIN (Port 2000)
 
+import os
+import sys
+import time
+import threading
+import ctypes
+from flask import Flask, render_template_string, request, jsonify
+import psutil
+import win32api
+import win32con
+from pymem import Pymem
+from pymem.pattern import pattern_scan_all
+from pymem.memory import read_bytes, write_bytes, read_int, write_int
+
+if sys.platform == "win32":
+    try:
+        ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 0)
+    except:
+        pass
+
+app = Flask(__name__)
+
+# ==================== GLOBALS ====================
+SERVER_PORT = 2000
+current_process_name = "HD-Player.exe"
+aimbot_addresses = []
+is_initialized = False
+aimbot_active = False
+original_values = {}
+
+# ==================== PATTERN & OFFSETS ====================
+NEW_AIMBOT_AOB = "FF FF FF FF ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? FF FF FF FF FF FF FF FF FF FF FF FF ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? A5 43"
+
+OFFSET_AIMBOT_AI_READ = 0xFC
+OFFSET_AIMBOT_AI_WRITE = -0x358
+
+def mkp(aob):
+    if '??' in aob:
+        if aob.startswith("??"):
+            aob = f" {aob}"
+            n = aob.replace(" ??", ".").replace(" ", "\\x")
+            return bytes(n.encode())
+        else:
+            n = aob.replace(" ??", ".").replace(" ", "\\x")
+            return bytes(f"\\x{n}".encode())
+    else:
+        m = aob.replace(" ", "\\x")
+        return bytes(f"\\x{m}".encode())
+
+# ==================== SCAN FUNCTION ====================
+def scan_entities():
+    global aimbot_addresses, is_initialized, original_values
+    
+    aimbot_addresses = []
+    original_values = {}
+    
+    try:
+        proc = Pymem(current_process_name)
+    except Exception as e:
+        return f"Process '{current_process_name}' not found"
+    
+    try:
+        entity_pattern = mkp(NEW_AIMBOT_AOB)
+        addresses = pattern_scan_all(proc.process_handle, entity_pattern, return_multiple=True)
+        found_addresses = [int(addr) for addr in addresses]
+        
+        if not found_addresses:
+            proc.close_process()
+            return "No entities found"
+        
+        valid_entities = []
+        for base_addr in found_addresses:
+            try:
+                if read_bytes(proc.process_handle, base_addr, 4):
+                    valid_entities.append(base_addr)
+            except:
+                continue
+        
+        aimbot_addresses = valid_entities
+        is_initialized = True
+        proc.close_process()
+        
+        return f"SCAN COMPLETE - {len(aimbot_addresses)} ENTITIES FOUND"
+    except Exception as e:
+        return f"Scan failed: {str(e)}"
+
+# ==================== AIMBOT FUNCTIONS ====================
+def enable_aimbot():
+    global aimbot_active, original_values
+    
+    if not is_initialized or not aimbot_addresses:
+        return "No entities - Scan first"
+    
+    if aimbot_active:
+        return "Aimbot already enabled"
+    
+    try:
+        proc = Pymem(current_process_name)
+        for entity in aimbot_addresses:
+            key = f"{entity}_ai"
+            if key not in original_values:
+                orig = read_bytes(proc.process_handle, entity + OFFSET_AIMBOT_AI_WRITE, 4)
+                if orig:
+                    original_values[key] = orig
+            head_value = read_int(proc.process_handle, entity + OFFSET_AIMBOT_AI_READ)
+            write_int(proc.process_handle, entity + OFFSET_AIMBOT_AI_WRITE, head_value)
+        proc.close_process()
+        aimbot_active = True
+        return "Aimbot AI ENABLED"
+    except Exception as e:
+        return f"Enable failed: {str(e)}"
+
+def disable_aimbot():
+    global aimbot_active, original_values
+    
+    if not aimbot_active:
+        return "Aimbot already disabled"
+    
+    try:
+        proc = Pymem(current_process_name)
+        for key, orig in original_values.items():
+            if key.endswith("_ai"):
+                addr = int(key.split("_")[0])
+                try:
+                    write_bytes(proc.process_handle, addr + OFFSET_AIMBOT_AI_WRITE, orig, len(orig))
+                except:
+                    pass
+        proc.close_process()
+        original_values = {k: v for k, v in original_values.items() if not k.endswith("_ai")}
+        aimbot_active = False
+        return "Aimbot AI DISABLED"
+    except Exception as e:
+        return f"Disable failed: {str(e)}"
+
+# ==================== HTML ====================
+INDEX_HTML = """
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMBOT PANEL</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a;
+            font-family: 'Segoe UI', monospace;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 450px;
+            background: #141414;
+            border: 1px solid #ff2929;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 0 20px rgba(255, 41, 41, 0.2);
+        }
+
+        h1 {
+            color: #ff2929;
+            text-align: center;
+            font-size: 24px;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .sub {
+            text-align: center;
+            color: #666;
+            font-size: 11px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 12px;
+            background: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 8px;
+            color: #ccc;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            background: #2a2a2a;
+            border-color: #ff2929;
+        }
+
+        .btn-scan {
+            border-color: #ff4444;
+            color: #ff8888;
+        }
+
+        .btn-on {
+            border-color: #2e7d32;
+            color: #4caf50;
+        }
+
+        .btn-off {
+            border-color: #8b3a3a;
+            color: #ff8a8a;
+        }
+
+        .btn-scan:hover {
+            background: #2a1a1a;
+        }
+        .btn-on:hover {
+            background: #1a2a1a;
+        }
+        .btn-off:hover {
+            background: #2a1a1a;
+        }
+
+        .console {
+            background: #0a0a0a;
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            padding: 12px;
+            height: 150px;
+            overflow-y: auto;
+            font-family: 'Consolas', monospace;
+            font-size: 11px;
+            color: #8bc34a;
+            margin-top: 15px;
+        }
+
+        .status {
+            font-size: 12px;
+            color: #888;
+            text-align: center;
+            margin-bottom: 15px;
+            padding: 5px;
+            background: #0f0f0f;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AIMBOT PANEL</h1>
+        <div class="sub">NO LOGIN • PORT 2000</div>
+
+        <div class="status" id="status">STATUS: READY</div>
+
+        <button class="btn btn-scan" onclick="sendCommand('scan')">SCAN ENTITIES</button>
+        <button class="btn btn-on" onclick="sendCommand('on')">AIMBOT ON</button>
+        <button class="btn btn-off" onclick="sendCommand('off')">AIMBOT OFF</button>
+
+        <div class="console" id="console">[SYSTEM] READY\\n[SYSTEM] AIMBOT PANEL ACTIVE</div>
+    </div>
+
+    <script>
+        const consoleEl = document.getElementById('console');
+        const statusEl = document.getElementById('status');
+
+        function log(message) {
+            const now = new Date();
+            const time = now.toLocaleTimeString();
+            consoleEl.textContent += `\\n[${time}] ${message}`;
+            consoleEl.scrollTop = consoleEl.scrollHeight;
+            if (consoleEl.textContent.length > 3000) {
+                consoleEl.textContent = consoleEl.textContent.slice(-2500);
+            }
+        }
+
+        function setStatus(msg) {
+            statusEl.textContent = `STATUS: ${msg}`;
+        }
+
+        async function sendCommand(cmd) {
+            let action = '';
+            if (cmd === 'scan') {
+                log('SCANNING FOR ENTITIES...');
+                setStatus('SCANNING...');
+                action = 'scan';
+            } else if (cmd === 'on') {
+                log('ENABLING AIMBOT...');
+                setStatus('ENABLING...');
+                action = 'on';
+            } else if (cmd === 'off') {
+                log('DISABLING AIMBOT...');
+                setStatus('DISABLING...');
+                action = 'off';
+            }
+
+            try {
+                const response = await fetch('/execute', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ command: action })
+                });
+                const data = await response.json();
+                if (data.message) {
+                    log(data.message);
+                    if (data.message.includes('ENABLED')) setStatus('AIMBOT ACTIVE');
+                    else if (data.message.includes('DISABLED')) setStatus('AIMBOT INACTIVE');
+                    else if (data.message.includes('SCAN')) setStatus('SCAN DONE');
+                    else setStatus('READY');
+                }
+            } catch (error) {
+                log(`ERROR: ${error.message}`);
+                setStatus('ERROR');
+            }
+        }
+    </script>
+</body>
+</html>
+"""
+
+# ==================== ROUTES ====================
+@app.route('/')
+def index():
+    return INDEX_HTML
+
+@app.route('/execute', methods=['POST'])
+def execute():
+    data = request.get_json()
+    command = data.get('command')
+    
+    if command == 'scan':
+        result = scan_entities()
+    elif command == 'on':
+        result = enable_aimbot()
+    elif command == 'off':
+        result = disable_aimbot()
+    else:
+        result = 'Unknown command'
+    
+    return jsonify({'message': result})
+
+# ==================== MAIN ====================
+if __name__ == '__main__':
+    print("=" * 50)
+    print("SIMPLE AIMBOT PANEL")
+    print("=" * 50)
+    print(f"URL: http://localhost:{SERVER_PORT}")
+    print(f"Target Process: {current_process_name}")
+    print("=" * 50)
+    print("1. Make sure game is running")
+    print("2. Click SCAN ENTITIES")
+    print("3. Click AIMBOT ON to activate")
+    print("=" * 50)
+    
+    app.run(host='0.0.0.0', port=SERVER_PORT, debug=False, use_reloader=False)
