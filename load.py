@@ -8,12 +8,11 @@ import threading
 import ctypes
 from flask import Flask, render_template_string, request, jsonify
 import psutil
-import win32api
-import win32con
 from pymem import Pymem
 from pymem.pattern import pattern_scan_all
 from pymem.memory import read_bytes, write_bytes, read_int, write_int
 
+# Try to hide console (optional, may fail on some systems)
 if sys.platform == "win32":
     try:
         ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 0)
@@ -59,7 +58,7 @@ def scan_entities():
     try:
         proc = Pymem(current_process_name)
     except Exception as e:
-        return f"Process '{current_process_name}' not found"
+        return f"Process '{current_process_name}' not found. Make sure game is running."
     
     try:
         entity_pattern = mkp(NEW_AIMBOT_AOB)
@@ -68,7 +67,7 @@ def scan_entities():
         
         if not found_addresses:
             proc.close_process()
-            return "No entities found"
+            return "No entities found. Pattern may need update."
         
         valid_entities = []
         for base_addr in found_addresses:
@@ -352,9 +351,12 @@ if __name__ == '__main__':
     print(f"URL: http://localhost:{SERVER_PORT}")
     print(f"Target Process: {current_process_name}")
     print("=" * 50)
+    print("REQUIRED: pip install flask pymem psutil")
+    print("=" * 50)
     print("1. Make sure game is running")
-    print("2. Click SCAN ENTITIES")
-    print("3. Click AIMBOT ON to activate")
+    print("2. Open browser to http://localhost:2000")
+    print("3. Click SCAN ENTITIES")
+    print("4. Click AIMBOT ON to activate")
     print("=" * 50)
     
     app.run(host='0.0.0.0', port=SERVER_PORT, debug=False, use_reloader=False)
