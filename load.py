@@ -533,14 +533,12 @@ def AIMBOT_OFF():
         RIGHTSHOULDEROFF()
     if aimbot_states["AimbotAi"]:
         AIMBOTAIOFF()
-    return "Headshot Disabled"
+    return "All Aimbots Disabled"
 
 # ==================== AUTHENTICATION (Aimbot Lite X Style - NO TOKEN) ====================
-# Public GitHub file for credentials (like Aimbot Lite X)
 GITHUB_AUTH_URL = "https://raw.githubusercontent.com/Ghostxs90/X-sid/main/sid2.txt"
 
 def get_computer_sid():
-    """Get Windows SID for this computer (like Aimbot Lite X)"""
     try:
         import win32security
         hToken = win32security.OpenProcessToken(
@@ -562,7 +560,6 @@ def get_computer_sid():
         return "S-1-5-21-123456789-123456789-123456789-500"
 
 def fetch_credentials():
-    """Fetch credentials from public GitHub file (like Aimbot Lite X)"""
     creds = {}
     try:
         headers = {
@@ -586,19 +583,18 @@ def fetch_credentials():
                     if user and passw and sid:
                         creds[user] = (passw, sid)
                         user = passw = sid = ""
-    except Exception as e:
-        print(f"[-] Auth error: {e}")
+    except:
+        pass
     return creds
 
 def authenticate_user(username, password):
-    """Authenticate using public GitHub file + SID check (Aimbot Lite X style)"""
     creds = fetch_credentials()
     current_sid = get_computer_sid()
     
     if username in creds and creds[username][0] == password and creds[username][1] == current_sid:
         return True, "Login successful"
     else:
-        return False, "INVALID CREDENTIALS or SID mismatch"
+        return False, "INVALID CREDENTIALS"
 
 # ==================== HOTKEY MONITOR ====================
 def hold_hotkey_monitor():
@@ -1048,6 +1044,5 @@ def exit_route():
 
 # ==================== MAIN ====================
 if __name__ == '__main__':
-    # No console prints when running with pythonw
     threading.Thread(target=hold_hotkey_monitor, daemon=True).start()
     app.run(host='0.0.0.0', port=SERVER_PORT, debug=False, use_reloader=False)
